@@ -11,12 +11,13 @@
 		function showNav(){
 			document.getElementById("mySideNav").style.width="200px";
 			document.getElementById("content").style.marginLeft="200px";
-			document.getElementById("content").style.width="100%";
+			document.getElementById("content").style.width="auto";
 		}
 
 		function closeNav(){
 			document.getElementById("mySideNav").style.width="0px";
 			document.getElementById("content").style.marginLeft="0px";
+			document.getElementById("content").style.width="auto";
 		}
 
 		function openNav(){
@@ -95,7 +96,7 @@
 			</div>
 
 			<div class="main" id="content">
-				<div class="box">
+				<div class="box" id="box-one">
 					<div class="box-header"><strong>BSc(Hons) Computer Security</strong></div>
 					<div class="box-content">
 						<div class="main-title">Enrolled Courses</div>

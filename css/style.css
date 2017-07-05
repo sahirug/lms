@@ -247,6 +247,14 @@ span.psw {
     border: 2px solid blue;
 }
 
+.new-main{
+    height: 100%;
+    margin-left:200px;
+    background:#ECF0F5;
+    padding: 25px;
+    border: 2px solid blue;
+}
+
 .box{
     background:white;
     width: 100%;
@@ -289,9 +297,11 @@ span.psw {
         display: block;
         float: none;
     }
+
     .cancelbtn {
         width: 100%;
     }
+
     .card{
         background-color: white;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -347,6 +357,8 @@ span.psw {
     }
 
     .main{
+        width: auto;
+        border: 6px solid blue;
         margin-left: 0;
         margin-top: auto;
         margin-bottom: auto;
