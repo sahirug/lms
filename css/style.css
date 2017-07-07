@@ -57,7 +57,7 @@ input[type=text]{
     /*font-family: Raleway;*/
 /*}*/
 
-button {
+input[type=submit] {
     font-family: Neuzeit, Raleway;
     font-size: 25px;
     background-color: #4CAF50;
@@ -69,7 +69,7 @@ button {
     width: 100%;
 }
 
-button:hover {
+input[type=submit]:hover {
     opacity: 0.8;
 }
 
@@ -103,12 +103,18 @@ span.psw {
     border-radius: 5px;
     width: 30%;
     height: 420px;
-    /*margin-top: 50px;*/
     margin-left: auto;
     margin-right: auto;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.error-messages{
+    text-align: center;
+    display: none;
+    color: red;
 }
 
 /*===================================================LOGIN FORM CSS(END)=================================================================*/
@@ -311,7 +317,7 @@ span.psw {
         height: 50%;
         margin-left: auto;
         margin-right: auto;
-        margin-top: 15px;
+        margin-top: 100px;
         /*position: relative;*/
         /*top: 50%;*/
         /*transform: translateY(50%);*/
