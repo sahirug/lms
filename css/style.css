@@ -153,7 +153,7 @@ span.psw {
     z-index: 1000; /* so the menu or its navicon stays above all content */
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
-    width: 200px;
+    width: 250px;
     float: left;
     min-height: 100%;
     background: #222D32;
@@ -168,7 +168,7 @@ span.psw {
     -ms-transition: all 0.2s ease-out;
     -o-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
-    width: 200px;
+    width: 250px;
     /*display: inline-block;*/
     height: 75px;
     /*background: black;*/
@@ -213,6 +213,16 @@ span.psw {
 .user-name:hover{
     background: #367FA9;
     color: white;
+    cursor: pointer;
+}
+
+.drop-down{
+    float: right;
+    width: 165px;
+    height: 10px;
+    border: 1px solid red;
+    margin-top: -25px;
+    margin-right: -25px;
 }
 
 .sidebar-list{
@@ -251,10 +261,10 @@ span.psw {
 
 .main {
     height: 100%;
-    margin-left:200px;
+    margin-left:250px;
     background:#ECF0F5;
     padding: 25px;
-    border: 2px solid blue;
+    /*border: 2px solid red;*/
 }
 
 .new-main{
@@ -262,7 +272,7 @@ span.psw {
     margin-left:200px;
     background:#ECF0F5;
     padding: 25px;
-    border: 2px solid blue;
+    /*border: 2px solid blue;*/
 }
 
 .box{
@@ -368,7 +378,7 @@ span.psw {
 
     .main{
         width: auto;
-        border: 6px solid blue;
+        /*border: 6px solid red;*/
         margin-left: 0;
         margin-top: auto;
         margin-bottom: auto;

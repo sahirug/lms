@@ -4,41 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sidebar test</title>
+    <title>Home</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="fonts/font-awesome.min.css">
-    <script type="text/javascript">
-
-        function showNav(){
-            document.getElementById("mySideNav").style.width="200px";
-            document.getElementById("content").style.marginLeft="200px";
-            document.getElementById("content").style.width="auto";
-        }
-
-        function closeNav(){
-            document.getElementById("mySideNav").style.width="0px";
-            document.getElementById("content").style.marginLeft="0px";
-            document.getElementById("content").style.width="auto";
-        }
-
-        function openNav(){
-            if(document.getElementById("mySideNav").style.width=="200px"){
-                closeNav();
-            }else{
-                showNav();
-            }
-        }
-
-        function myFunction(){
-            if(screen.width > 800){
-                showNav();
-            }else{
-                closeNav();
-            }
-        }
-    </script>
+    <script type="text/javascript" src="js/script.js"></script>
 </head>
-<body onresize="myFunction()" id="dash">
+<body onresize="myFunction()" id="home">
 
 <div class="wrapper">
 
@@ -57,7 +28,9 @@
             <div class="menu-icon-div">
                 <a href="#" onclick="openNav()" class="menu-link"><img src="images/menu1.png" class="menu-icon"></a>
             </div>
-            <span class="user-name"><?php echo isset($_SESSION['username'])?$_SESSION['username']:''; ?><i class="fa fa-sort-down" style="margin-left: 15px;"></i></span>
+            <span class="user-name">
+                <?php echo isset($_SESSION['username'])?$_SESSION['username']:'no user'; ?>
+            </span>
 
 
 
@@ -89,7 +62,7 @@
                 </li>
                 <li class="sidebar-item">
                     <a href="#" class="link">
-                        <i class="fa fa-upload"></i> <span style="padding: 10px;">Upload Assignments</span>
+                        <i class="fa fa-upload"></i> <span style="padding: 10px;">Amend Personal Data</span>
                     </a>
                 </li>
             </ul>

@@ -77,7 +77,7 @@
                 session_start();
                 $_SESSION['username'] = $username;
                 $_SESSION['access_level'] = $access_level;
-                header("Location: template.php");
+                header("Location: home.php");
             }else{
                 echo "<script>showError('password');</script>";
             }
