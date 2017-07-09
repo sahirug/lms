@@ -157,6 +157,7 @@ span.psw {
     float: left;
     min-height: 100%;
     background: #222D32;
+    /*display: none;*/
     /*background: black;*/
     /*text-align: left;*/
 }
@@ -260,10 +261,12 @@ span.psw {
 }
 
 .main {
+    /*width: auto;*/
     height: 100%;
     margin-left:250px;
     background:#ECF0F5;
     padding: 25px;
+    border: 0px solid blue;
     /*border: 2px solid red;*/
 }
 
@@ -277,12 +280,11 @@ span.psw {
 
 .box{
     background:white;
-    width: 100%;
+    width: 98%;
     margin-top: 5px;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 5px;
-    border: 0px solid red;
+    padding: 5px 10px 10px 10px;
     border-radius: 5px;
 }
 
@@ -291,7 +293,7 @@ span.psw {
     font-family: Neuzeit;
     font-weight: 900;
     font-size: 25px;
-    border-bottom: 5px solid blue;
+    border-bottom: 5px solid #3C8DBC;
 }
 
 .box-content{
@@ -305,13 +307,69 @@ span.psw {
     text-decoration: underline;
 }
 
+.box-data{
+    margin-top: 15px;
+    overflow-x: auto;
+    text-align: center;
+}
+
+.sidebar-profile{
+    height: 100px;
+    width: 100%;
+    margin-top: -10px;
+    padding: 0px;
+    border-bottom: 0px solid black;
+    text-align: left;
+    /*color: #84BDCE;*/
+    color: white;
+}
+
+.sidebar-profile-item{
+    height: auto;
+    border: 0px solid white;
+    padding: 5px;
+}
+
+.sidebar-profile-last-item{
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+td {
+    border-bottom: 1px solid black;
+}
+
+td{
+    padding: 10px;
+}
+
+table tr:not(:nth-child(1)):hover {
+    background-color: darkgrey;
+    cursor: pointer;
+}
+
+table tr:nth-child(1){
+    border-bottom: 1px solid black;
+}
+
 /*======================================================TEMPLATE CSS (END)===============================================================*/
 
 /* @media query to change styles on extra small screens */
+
 @media screen and (max-width: 1024px) {
 
     /*===============================================LOGIN FORM CSS(MOBILE)==============================================================*/
 
+    .wrapper{
+        overflow: auto;
+    }
 
     span.psw {
         display: block;
@@ -382,6 +440,11 @@ span.psw {
         margin-left: 0;
         margin-top: auto;
         margin-bottom: auto;
+        /*overflow: auto;*/
+    }
+
+    .box{
+        width: 95%;
     }
 
     /*===============================================MAIN SCREEN CSS(MOBILE END)=========================================================*/

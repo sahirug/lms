@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="fonts/font-awesome.min.css">
     <script type="text/javascript" src="js/script.js"></script>
 </head>
-<body onresize="myFunction()" id="home">
+<body id="body" onresize="myFunction()">
 
-<div class="wrapper">
+<div class="wrapper" id="wrapper">
 
     <div class="header">
 
@@ -45,6 +45,23 @@
     <div class="left" id="mySideNav">
         <div class="sidebar-list">
             <ul>
+                <div class="sidebar-profile">
+                    <?php
+                    include "php/user_details.php";
+
+                    if($access_level == "student"){
+                        echo "<div class='sidebar-profile-item'>".$user_result['student_name']."</div>";
+                        echo
+                            "<div class='sidebar-profile-item'>".$user_result['batch']."</div>";
+                        echo "<div class='sidebar-profile-item sidebar-profile-last-item'>Logout<i class='fa fa-sign-out' style='float: right'></i></div>";
+                    }else if($access_level == "lec"){
+                        echo "<div class='sidebar-profile-item'>".$user_result['staff_name']."</div>";
+//                        echo
+//                            "<div class='sidebar-profile-item'>".$user_result['batch']."</div>";
+                    }
+
+                    ?>
+                </div>
                 <?php
                 include "php/sidebar_arrays.php";
                 if(isset($_SESSION['access_level']) && $_SESSION['access_level'] == "student" ){
@@ -71,9 +88,50 @@
 
         <div class="main" id="content">
             <div class="box" id="box-one">
-                <div class="box-header"><strong>BSc(Hons) Computer Security</strong></div>
+                <div class="box-header">
+                    <strong>
+                        <?php
+                        include "php/user_details.php";
+                        echo $award_name;
+//                        if ($_SESSION['access_level'] == "student"){
+//                            echo $award_name;
+//                        }
+
+                        ?>
+                    </strong>
+                    <div class="year">
+                        <?php
+                        if($access_level == "student"){
+                            echo "<small>Year ".$user_result['year']."</small>";
+                        }else{
+                            echo "";
+                        }
+
+
+                        ?>
+                    </div>
+                </div>
                 <div class="box-content">
-                    <div class="main-title">Enrolled Courses</div>
+                    <div class="main-title">
+                        My Modules
+                    </div>
+                    <div class="box-data">
+                        <table border="0" width="100%">
+                            <tr style="border-bottom: 1px solid black;">
+                                <td>Module ID</td>
+                                <td>Module Name</td>
+                            </tr>
+                            <?php
+                            include "php/user_details.php";
+
+                            foreach ($module_list as $module){
+                                echo "<tr><td>".$module['module_id']."</td><td><a href='#'>".$module['module_name']."</a></td></tr>";
+                            }
+                            
+                            ?>
+                        </table>
+
+                    </div>
                 </div>
             </div>
         </div>
