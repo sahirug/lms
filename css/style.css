@@ -261,7 +261,7 @@ span.psw {
 }
 
 .main {
-    /*width: auto;*/
+    width: auto;
     height: 100%;
     margin-left:250px;
     background:#ECF0F5;
@@ -351,12 +351,21 @@ td{
 }
 
 table tr:not(:nth-child(1)):hover {
-    background-color: darkgrey;
+    background-color: #8cccf2;
     cursor: pointer;
 }
 
 table tr:nth-child(1){
     border-bottom: 1px solid black;
+}
+
+table tr:last-child{
+    /*border: white;*/
+    /*color: green;*/
+}
+
+table tr:last-child:hover{
+    border: white;
 }
 
 /*======================================================TEMPLATE CSS (END)===============================================================*/

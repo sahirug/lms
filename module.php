@@ -91,8 +91,9 @@
                 <div class="box-header">
                     <strong>
                         <?php
-                        include "php/user_details.php";
-                        echo $award_name;
+                        include "php/init.php";
+                        include "php/module_details.php";
+                        echo module_name($_GET['module_id'], $conn);
 //                        if ($_SESSION['access_level'] == "student"){
 //                            echo $award_name;
 //                        }
@@ -104,7 +105,6 @@
                         if($access_level == "student"){
                             echo "<small>Year ".$user_result['year']."</small>";
                         }else{
-                            echo "";
                         }
 
 
@@ -118,15 +118,24 @@
                     <div class="box-data">
                         <table border="0" width="100%">
                             <tr style="border-bottom: 1px solid black;">
-                                <td>Module ID</td>
+                                <td>Lesson Number</td>
                                 <td>Module Name</td>
+                                <td>Material Type</td>
+                                <?php include "php/user_details.php"; echo ($access_level=="lec"?"<td>Action</td>":""); ?>
                             </tr>
                             <?php
                             include "php/user_details.php";
 
                             foreach ($module_list as $module){
-                                $module_id = $module['module_id'];
-                                echo "<tr><td>".$module['module_id']."</td><td><a href='http://localhost/lms/module.php?module_id=$module_id'>".$module['module_name']."</a></td></tr>";
+                                echo "<tr><td>".$module['module_id']."</td><td><a href='#'>".$module['module_name']."</a></td><td>Tute</td>";
+                                if($access_level == "lec")
+                                    echo "<td>
+                                                <a><i class='fa fa-trash' style='padding-right: 10px; color: red;'></i></a>
+                                                <a><i class='fa fa-edit' style='color: blue'></i></a></td></tr>";
+                            }
+
+                            if($access_level == "lec"){
+                                echo "<tr style='border-bottom: none'><td></td><td></td><td></td><td><a href='add_material.php?module_id=B1'><i class='fa fa-plus' style='color: green'></i></a></td></tr>";
                             }
                             
                             ?>
