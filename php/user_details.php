@@ -34,17 +34,20 @@ if($results->num_rows > 0){
 //    echo $award_name;
     if($access_level == "student"){
         $sql =
-            "SELECT module.module_name, module_has_students.module_id 
+            "SELECT module.module_name, module_has_students.module_id, batch_module_lecturer.staff_id 
             FROM module 
             INNER JOIN module_has_students 
             ON module.module_id = module_has_students.module_id
-            WHERE module_has_students.student_id = '".$user_result["student_id"]."'";
+            INNER JOIN batch_module_lecturer
+            ON module.module_id = batch_module_lecturer.module_id
+            WHERE module_has_students.student_id = '".$user_result["student_id"]."' AND batch_module_lecturer.batch_id = '".$user_result['batch']."';";
         $results = $conn->query($sql);
         $i=0;
         if($results->num_rows > 0){
             while($row = $results->fetch_assoc()){
                 $module_list[$i]["module_id"] = $row["module_id"];
                 $module_list[$i]["module_name"] = $row["module_name"];
+                $module_list[$i]["staff_id"] = $row["staff_id"];
                 $i++;
             }
         }else{
@@ -75,8 +78,14 @@ if($results->num_rows > 0){
         }
     }
 }else{
-    echo "error";
+    echo "error: user_details.php";
 }
 
-//print_r($module_list);
+//function get_lecturer_name($conn, $staff_id){
+//    $sql = "SELECT staff_name FROM staff WHERE staff_id = '$staff_id'";
+//    $results = $conn->query($sql);
+//    $results = $results->fetch_assoc();
+//    return $results['staff_name'];
+//}
+
 ?>

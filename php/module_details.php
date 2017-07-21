@@ -8,6 +8,11 @@ function module_name($module_id, $conn){
     return $results['module_name'];
 }
 
-//echo module_name($_GET['module_id'], $conn);
+function get_lecturer_name($conn, $staff_id){
+    $sql = "SELECT staff_name FROM staff WHERE staff_id = '$staff_id'";
+    $results = $conn->query($sql);
+    $results = $results->fetch_assoc();
+    return $results['staff_name'];
+}
 
 ?>

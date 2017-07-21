@@ -23,7 +23,7 @@ form {
     border: 3px solid #f1f1f1;
 }
 
-input[type=text], input[type=password] {
+.login-user, .login-pass {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -41,7 +41,7 @@ input[type=text]{
     font-family: Neuzeit, Raleway;
 }
 
-::-webkit-input-placeholder {
+.login-user::-webkit-input-placeholder, .login-pass::-webkit-input-placeholder {
     font-weight: bold;
     font-family: Neuzeit, Raleway;
     font-size: 20px;
@@ -57,8 +57,8 @@ input[type=text]{
     /*font-family: Raleway;*/
 /*}*/
 
-input[type=submit] {
-    font-family: Neuzeit, Raleway;
+.login-submit {
+    font-family: Neuzeit;
     font-size: 25px;
     background-color: #4CAF50;
     color: white;
@@ -69,7 +69,7 @@ input[type=submit] {
     width: 100%;
 }
 
-input[type=submit]:hover {
+.login-submit:hover {
     opacity: 0.8;
 }
 
@@ -313,6 +313,10 @@ span.psw {
     text-align: center;
 }
 
+.box-data-content{
+
+}
+
 .sidebar-profile{
     height: 100px;
     width: 100%;
@@ -368,6 +372,50 @@ table tr:last-child:hover{
     border: white;
 }
 
+.form-text-field{
+    display: inline-block;
+    box-shadow: none;
+    padding: 10px;
+    font-size: 16px;
+    border: solid 1px #dcdcdc;
+    transition: box-shadow 0.3s, border 0.3s;
+}
+
+select{
+    font-family: Neuzeit;
+}
+
+input[type=file]{
+    font-family: Neuzeit;
+}
+
+.textfield-label{
+    width: 25%;
+    border: 0px solid red;
+    display: inline-block;
+}
+
+.small{
+    width: 30%;
+}
+
+.medium-size{
+    width: 70%;
+}
+
+
+.form-text-field:focus{
+    outline: none;
+    border: solid 1px #8cccf2;
+    box-shadow: 0 0 5px 1px #969696;
+}
+
+.form-group{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /*border: 1px solid red;*/
+}
+
 /*======================================================TEMPLATE CSS (END)===============================================================*/
 
 /* @media query to change styles on extra small screens */
@@ -375,6 +423,8 @@ table tr:last-child:hover{
 @media screen and (max-width: 1024px) {
 
     /*===============================================LOGIN FORM CSS(MOBILE)==============================================================*/
+
+
 
     .wrapper{
         overflow: auto;
@@ -458,5 +508,17 @@ table tr:last-child:hover{
 
     /*===============================================MAIN SCREEN CSS(MOBILE END)=========================================================*/
 
+    .form-text-field{
+        display: block;
+    }
+
+    .form-group{
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .textfield-label{
+        padding: 5px;
+    }
 
 }

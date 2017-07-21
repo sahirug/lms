@@ -36,13 +36,13 @@
 
         <div class="container">
 
-            <input type="text" placeholder="Enter Username" name="username" id="username" required value="<?php echo isset($_POST['username'])? $_POST['username']:''; ?>">
+            <input type="text" placeholder="Enter Username" name="username" id="username" class="login-user" required value="<?php echo isset($_POST['username'])? $_POST['username']:''; ?>">
             <div class="error-messages" id="err-user"><span>Invalid username</span></div>
 
-            <input type="password" placeholder="Enter Password" name="password" id="password" required>
+            <input type="password" placeholder="Enter Password" name="password" id="password" class="login-pass" required>
             <div class="error-messages" id="err-pass"><span>Invalid Password</span></div>
 
-            <input type="submit" value="Login"/>
+            <input type="submit" value="Login" class="login-submit"/>
 
             <input type="checkbox" checked="checked"> <span style="font-size: 14px">Remember me</span>
 
@@ -74,9 +74,16 @@
                 $username = $result['username'];
                 $password = $result['password'];
                 $access_level = $result['access_level'];
+                $id = "";
+                if($access_level == "student"){
+                    $id = $result['student_id'];
+                }else{
+                    $id = $result['staff_id'];
+                }
                 session_start();
                 $_SESSION['username'] = $username;
                 $_SESSION['access_level'] = $access_level;
+                $_SESSION['id'] = $id;
                 header("Location: home.php");
             }else{
                 echo "<script>showError('password');</script>";
