@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 21, 2017 at 10:58 PM
+-- Generation Time: Jul 22, 2017 at 11:28 PM
 -- Server version: 10.1.10-MariaDB
 -- PHP Version: 5.6.19
 
@@ -120,6 +120,76 @@ INSERT INTO `batch_module_lecturer` (`batch_id`, `module_id`, `staff_id`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `club`
+--
+
+CREATE TABLE `club` (
+  `club_id` int(11) NOT NULL,
+  `club_name` varchar(150) NOT NULL,
+  `president` varchar(10) NOT NULL,
+  `category` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `club`
+--
+
+INSERT INTO `club` (`club_id`, `club_name`, `president`, `category`) VALUES
+(1, 'Basketball', 'ST001', 'Sports'),
+(2, 'Nature Club', 'ST002', 'Community Service'),
+(3, 'Movie Club', 'ST003', 'Entertainment'),
+(4, 'Badminton', 'ST004', 'Sports'),
+(5, 'Charity Club', 'ST005', 'Community Service'),
+(6, 'Gamers Club', 'ST006', 'Entertainment');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `club_has_members`
+--
+
+CREATE TABLE `club_has_members` (
+  `club_id` int(11) NOT NULL,
+  `student_id` varchar(10) NOT NULL,
+  `role` varchar(15) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `club_has_members`
+--
+
+INSERT INTO `club_has_members` (`club_id`, `student_id`, `role`) VALUES
+(1, 'ST001', 'President'),
+(2, 'ST001', 'Member'),
+(4, 'ST004', 'President'),
+(5, 'ST004', 'Member'),
+(5, 'ST005', 'President'),
+(6, 'ST005', 'Member'),
+(6, 'ST006', 'President'),
+(1, 'ST006', 'Member'),
+(1, 'ST007', 'Member'),
+(2, 'ST007', 'Member'),
+(2, 'ST008', 'Member'),
+(3, 'ST008', 'Member'),
+(3, 'ST009', 'Member'),
+(4, 'ST009', 'Member'),
+(4, 'ST010', 'Member'),
+(5, 'ST010', 'Member'),
+(5, 'ST011', 'Member'),
+(6, 'ST011', 'Member'),
+(6, 'ST012', 'Member'),
+(1, 'ST012', 'Member'),
+(3, 'ST001', 'Member'),
+(3, 'ST004', 'Member'),
+(1, 'ST005', 'Member'),
+(2, 'ST002', 'President'),
+(3, 'ST002', 'Member'),
+(3, 'ST003', 'President'),
+(4, 'ST003', 'Member');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `faculty`
 --
 
@@ -165,6 +235,51 @@ INSERT INTO `lecture_notes` (`note_id`, `module_id`, `staff_id`, `lesson_number`
 (8, 'B1', 'SF001', 1, 'Verbal', 'Presentation', 'files/B1_SF001_Verbal.pptx'),
 (9, 'C2', 'SF010', 1, 'Multidimensional Arrays', 'Presentation', 'files/C2_SF010_Multidimensional Arrays.pptx'),
 (10, 'B4', 'SF001', 1, 'Balance Sheets', 'Tute', 'files/B4_SF001_Balance Sheets.docx');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `message`
+--
+
+CREATE TABLE `message` (
+  `message_id` int(11) NOT NULL,
+  `club_id` int(11) NOT NULL,
+  `message_title` varchar(100) NOT NULL,
+  `message_body` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `message`
+--
+
+INSERT INTO `message` (`message_id`, `club_id`, `message_title`, `message_body`) VALUES
+(13, 3, 'safasfsa', 'fsafsafasfasfa');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `message_has_member`
+--
+
+CREATE TABLE `message_has_member` (
+  `message_id` int(11) NOT NULL,
+  `student_id` varchar(10) NOT NULL,
+  `club_id` int(11) NOT NULL,
+  `status` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `message_has_member`
+--
+
+INSERT INTO `message_has_member` (`message_id`, `student_id`, `club_id`, `status`) VALUES
+(13, 'ST001', 3, 'Unread'),
+(13, 'ST002', 3, 'Unread'),
+(13, 'ST003', 3, 'Unread'),
+(13, 'ST004', 3, 'Unread'),
+(13, 'ST008', 3, 'Unread'),
+(13, 'ST009', 3, 'Unread');
 
 -- --------------------------------------------------------
 
@@ -429,6 +544,20 @@ ALTER TABLE `batch_module_lecturer`
   ADD KEY `staff_id` (`staff_id`);
 
 --
+-- Indexes for table `club`
+--
+ALTER TABLE `club`
+  ADD PRIMARY KEY (`club_id`),
+  ADD KEY `president` (`president`);
+
+--
+-- Indexes for table `club_has_members`
+--
+ALTER TABLE `club_has_members`
+  ADD KEY `student_id` (`student_id`,`club_id`),
+  ADD KEY `club_id` (`club_id`);
+
+--
 -- Indexes for table `faculty`
 --
 ALTER TABLE `faculty`
@@ -441,6 +570,21 @@ ALTER TABLE `lecture_notes`
   ADD PRIMARY KEY (`note_id`),
   ADD KEY `module_id` (`module_id`),
   ADD KEY `staff_id` (`staff_id`);
+
+--
+-- Indexes for table `message`
+--
+ALTER TABLE `message`
+  ADD PRIMARY KEY (`message_id`),
+  ADD KEY `club_id` (`club_id`);
+
+--
+-- Indexes for table `message_has_member`
+--
+ALTER TABLE `message_has_member`
+  ADD PRIMARY KEY (`message_id`,`student_id`,`club_id`),
+  ADD KEY `student_id` (`student_id`),
+  ADD KEY `club_id` (`club_id`);
 
 --
 -- Indexes for table `module`
@@ -494,10 +638,20 @@ ALTER TABLE `user`
 --
 
 --
+-- AUTO_INCREMENT for table `club`
+--
+ALTER TABLE `club`
+  MODIFY `club_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+--
 -- AUTO_INCREMENT for table `lecture_notes`
 --
 ALTER TABLE `lecture_notes`
   MODIFY `note_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+--
+-- AUTO_INCREMENT for table `message`
+--
+ALTER TABLE `message`
+  MODIFY `message_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 --
 -- Constraints for dumped tables
 --
@@ -518,11 +672,38 @@ ALTER TABLE `batch_module_lecturer`
   ADD CONSTRAINT `batch_module_lecturer_ibfk_3` FOREIGN KEY (`staff_id`) REFERENCES `staff` (`staff_id`);
 
 --
+-- Constraints for table `club`
+--
+ALTER TABLE `club`
+  ADD CONSTRAINT `club_ibfk_1` FOREIGN KEY (`president`) REFERENCES `student` (`student_id`);
+
+--
+-- Constraints for table `club_has_members`
+--
+ALTER TABLE `club_has_members`
+  ADD CONSTRAINT `club_has_members_ibfk_1` FOREIGN KEY (`club_id`) REFERENCES `club` (`club_id`),
+  ADD CONSTRAINT `club_has_members_ibfk_2` FOREIGN KEY (`student_id`) REFERENCES `student` (`student_id`);
+
+--
 -- Constraints for table `lecture_notes`
 --
 ALTER TABLE `lecture_notes`
   ADD CONSTRAINT `lecture_notes_ibfk_1` FOREIGN KEY (`module_id`) REFERENCES `module` (`module_id`),
   ADD CONSTRAINT `lecture_notes_ibfk_2` FOREIGN KEY (`staff_id`) REFERENCES `staff` (`staff_id`);
+
+--
+-- Constraints for table `message`
+--
+ALTER TABLE `message`
+  ADD CONSTRAINT `message_ibfk_1` FOREIGN KEY (`club_id`) REFERENCES `club` (`club_id`);
+
+--
+-- Constraints for table `message_has_member`
+--
+ALTER TABLE `message_has_member`
+  ADD CONSTRAINT `message_has_member_ibfk_1` FOREIGN KEY (`message_id`) REFERENCES `message` (`message_id`),
+  ADD CONSTRAINT `message_has_member_ibfk_2` FOREIGN KEY (`student_id`) REFERENCES `student` (`student_id`),
+  ADD CONSTRAINT `message_has_member_ibfk_3` FOREIGN KEY (`club_id`) REFERENCES `club` (`club_id`);
 
 --
 -- Constraints for table `module`

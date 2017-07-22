@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ca364cb0-aaf0-4d46-9e38-218f4eaa96f1" name="Default" comment="upload/download lecture notes, sort notes by batch, logout">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+    <list default="true" id="ca364cb0-aaf0-4d46-9e38-218f4eaa96f1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home.php" afterPath="$PROJECT_DIR$/home.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module.php" afterPath="$PROJECT_DIR$/module.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/sidebar_arrays.php" afterPath="$PROJECT_DIR$/php/sidebar_arrays.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/lms.sql" afterPath="$PROJECT_DIR$/db/lms.sql" />
     </list>
     <ignored path="LMS.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -227,6 +222,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -316,7 +325,7 @@
       <workItem from="1500633301221" duration="19035000" />
       <workItem from="1500671397573" duration="410000" />
       <workItem from="1500715449539" duration="28734000" />
-      <workItem from="1500758809270" duration="18000" />
+      <workItem from="1500758809270" duration="137000" />
     </task>
     <task id="LOCAL-00001" summary="fixed div main overflowing on mobile">
       <created>1499277105881</created>
@@ -381,11 +390,18 @@
       <option name="project" value="LOCAL" />
       <updated>1500671503115</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="implemented club functions: add member, remove member, send message">
+      <created>1500758868228</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1500758868228</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="174630000" />
+    <option name="totallyTimeSpent" value="174749000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
@@ -433,7 +449,8 @@
     <MESSAGE value="load user details" />
     <MESSAGE value="landing page, loading user modules" />
     <MESSAGE value="upload/download lecture notes, sort notes by batch, logout" />
-    <option name="LAST_COMMIT_MESSAGE" value="upload/download lecture notes, sort notes by batch, logout" />
+    <MESSAGE value="implemented club functions: add member, remove member, send message" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented club functions: add member, remove member, send message" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -599,6 +616,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1319">
           <caret line="104" column="55" selection-start-line="104" selection-start-column="55" selection-end-line="104" selection-end-column="55" />
+          <folding>
+            <marker date="1500718579479" expanded="true" signature="1756:1768" ph="..." />
+            <marker date="1500718579479" expanded="true" signature="2608:2621" ph="..." />
+            <marker date="1500718579479" expanded="true" signature="3125:3138" ph="..." />
+            <marker date="1500718579479" expanded="true" signature="4346:4695" ph="..." />
+            <marker date="1500718579479" expanded="true" signature="4391:4453" ph="..." />
+            <marker date="1500718579479" expanded="true" signature="4496:4695" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -620,6 +645,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
           <caret line="57" column="50" selection-start-line="57" selection-start-column="50" selection-end-line="57" selection-end-column="50" />
+          <folding>
+            <marker date="1500729600026" expanded="true" signature="1647:1660" ph="..." />
+            <marker date="1500729600026" expanded="true" signature="2164:2177" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -672,6 +701,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+          <folding>
+            <marker date="1500730177276" expanded="true" signature="72:327" ph="SELECT club.... club" />
+            <marker date="1500730177276" expanded="true" signature="731:1183" ph="..." />
+            <marker date="1500730177276" expanded="true" signature="818:846" ph="..." />
+            <marker date="1500730177276" expanded="true" signature="968:995" ph="..." />
+            <marker date="1500730177276" expanded="true" signature="1121:1146" ph="..." />
+            <marker date="1500730177276" expanded="true" signature="1313:1339" ph="..." />
+            <marker date="1500730177276" expanded="true" signature="1424:1442" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -689,6 +727,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="568">
           <caret line="98" column="24" selection-start-line="98" selection-start-column="24" selection-end-line="98" selection-end-column="24" />
+          <folding>
+            <marker date="1500750100336" expanded="true" signature="1647:1660" ph="..." />
+            <marker date="1500750100336" expanded="true" signature="2164:2177" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -714,6 +756,41 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+          <folding>
+            <marker date="1500758597967" expanded="true" signature="456:498" ph="SELECT club_... club" />
+            <marker date="1500758597967" expanded="true" signature="456:499" ph="SELECT club_... club" />
+            <marker date="1500758597967" expanded="true" signature="989:1043" ph="..." />
+            <marker date="1500758597967" expanded="true" signature="1191:1201" ph="..." />
+            <marker date="1500758597967" expanded="true" signature="1238:1255" ph="..." />
+            <marker date="1500758597967" expanded="true" signature="1314:1368" ph="..." />
+            <marker date="1500758597967" expanded="true" signature="1461:1511" ph="..." />
+            <marker date="1500758597967" expanded="true" signature="1656:1694" ph="..." />
+            <marker date="1500758597967" expanded="true" signature="1785:1895" ph="INSERT INTO message... " />
+            <marker date="1500758597967" expanded="true" signature="1935:1957" ph="SELECT stude... " />
+            <marker date="1500758597967" expanded="true" signature="1935:1992" ph="SELECT stude... club_has_members" />
+            <marker date="1500758597967" expanded="true" signature="2155:2221" ph="SELECT stude... club_has_members" />
+            <marker date="1500758597967" expanded="true" signature="2409:2539" ph="INSERT INTO message_has_member... " />
+            <marker date="1500758597967" expanded="true" signature="2808:3084" ph="select DISTI... student" />
+            <marker date="1500758597967" expanded="true" signature="2808:3112" ph="select DISTI... student" />
+            <marker date="1500758597967" expanded="true" signature="3019:3075" ph="SELECT stude... club_has_members" />
+            <marker date="1500758597967" expanded="true" signature="3220:3274" ph="..." />
+            <marker date="1500758597967" expanded="true" signature="3398:3452" ph="..." />
+            <marker date="1500758597967" expanded="true" signature="3664:3675" ph="..." />
+            <marker date="1500758597967" expanded="true" signature="3746:3844" ph="INSERT INTO club_has_members... " />
+            <marker date="1500758597967" expanded="true" signature="4043:5506" ph="..." />
+            <marker date="1500758597967" expanded="true" signature="4130:5095" ph="{...}" />
+            <marker date="1500758597967" expanded="true" signature="4144:4457" ph="SELECT DISTI... student" />
+            <marker date="1500758597967" expanded="true" signature="4150:4457" ph="select DISTI... student" />
+            <marker date="1500758597967" expanded="true" signature="4356:4412" ph="select stude... club_has_members" />
+            <marker date="1500758597967" expanded="true" signature="4565:4619" ph="..." />
+            <marker date="1500758597967" expanded="true" signature="4743:4797" ph="..." />
+            <marker date="1500758597967" expanded="true" signature="5055:5089" ph="..." />
+            <marker date="1500758597967" expanded="true" signature="5163:5224" ph="DELETE FROM " />
+            <marker date="1500758597967" expanded="true" signature="5163:5228" ph="DELETE FROM " />
+            <marker date="1500758597967" expanded="true" signature="5163:5229" ph="DELETE FROM " />
+            <marker date="1500758597967" expanded="true" signature="5163:5249" ph="DELETE FROM " />
+            <marker date="1500758597967" expanded="true" signature="5174:5191" ph="INSERT INTO club_has_members... " />
+          </folding>
         </state>
       </provider>
     </entry>
