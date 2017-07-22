@@ -45,23 +45,6 @@
     <div class="left" id="mySideNav">
         <div class="sidebar-list">
             <ul>
-<!--                <div class="sidebar-profile">-->
-<!--                    
-//                    include "php/user_details.php";
-//
-//                    if($access_level == "student"){
-//                        echo "<div class='sidebar-profile-item'>".$user_result['student_name']."</div>";
-//                        echo
-//                            "<div class='sidebar-profile-item'>".$user_result['batch']."</div>";
-//                        echo "<div class='sidebar-profile-item sidebar-profile-last-item'>Logout<i class='fa fa-sign-out' style='float: right'></i></div>";
-//                    }else if($access_level == "lec"){
-//                        echo "<div class='sidebar-profile-item'>".$user_result['staff_name']."</div>";
-////                        echo
-////                            "<div class='sidebar-profile-item'>".$user_result['batch']."</div>";
-//                    }
-//
-//                    ?>
-<!--                </div>-->
                 <?php
                 include "php/sidebar_arrays.php";
                 if(isset($_SESSION['access_level']) && $_SESSION['access_level'] == "student" ){
@@ -86,51 +69,30 @@
         </div>
     </div>
 
-        <div class="main" id="content">
-            <div class="box" id="box-one">
-                <div class="box-header">
-                    <strong>
-                        <?php
-                        include "php/init.php";
-                        include "php/module_details.php";
-                        echo module_name($_GET['module_id'], $conn);
-//                        if ($_SESSION['access_level'] == "student"){
-//                            echo $award_name;
-//                        }
-
-                        ?>
-                    </strong>
-                    <div class="year">
-                        <?php
-                        include "php/user_details.php";
-                        if($access_level == "student"){
-                            echo "<small>Year ".$user_result['year']."</small>";
-                        }else{
-                        }
-
-
-                        ?>
-                    </div>
+    <div class="main" id="content">
+        <div class="box" id="box-one">
+            <div class="box-header">
+                <strong>
+                    Clubs
+                </strong>
+            </div>
+            <div class="box-content">
+                <div class="main-title">
                 </div>
-                <div class="box-content">
-                    <div class="main-title">
-                        My Modules
-                    </div>
-                    <div class="box-data">
-                            <?php
-                            include "php/init.php";
-                            include "php/fetch_notes.php";
+                <div class="box-data">
+                    <?php
+                    include "php/init.php";
+                    include "php/load_clubs.php";
 
-                            load_material($_SESSION['id'], $_GET['module_id'], $conn);
-                            
-                            ?>
+                    load_clubs($conn, $_SESSION['id']);
 
-                    </div>
+
+                    ?>
                 </div>
             </div>
         </div>
+    </div>
 </div>
-<!-- <script type="text/javascript" src="script.js"></script> -->
 
 </body>
 </html>

@@ -45,23 +45,6 @@
     <div class="left" id="mySideNav">
         <div class="sidebar-list">
             <ul>
-<!--                <div class="sidebar-profile">-->
-<!--                    
-//                    include "php/user_details.php";
-//
-//                    if($access_level == "student"){
-//                        echo "<div class='sidebar-profile-item'>".$user_result['student_name']."</div>";
-//                        echo
-//                            "<div class='sidebar-profile-item'>".$user_result['batch']."</div>";
-//                        echo "<div class='sidebar-profile-item sidebar-profile-last-item'>Logout<i class='fa fa-sign-out' style='float: right'></i></div>";
-//                    }else if($access_level == "lec"){
-//                        echo "<div class='sidebar-profile-item'>".$user_result['staff_name']."</div>";
-////                        echo
-////                            "<div class='sidebar-profile-item'>".$user_result['batch']."</div>";
-//                    }
-//
-//                    ?>
-<!--                </div>-->
                 <?php
                 include "php/sidebar_arrays.php";
                 if(isset($_SESSION['access_level']) && $_SESSION['access_level'] == "student" ){
@@ -86,51 +69,43 @@
         </div>
     </div>
 
-        <div class="main" id="content">
-            <div class="box" id="box-one">
-                <div class="box-header">
-                    <strong>
-                        <?php
-                        include "php/init.php";
-                        include "php/module_details.php";
-                        echo module_name($_GET['module_id'], $conn);
-//                        if ($_SESSION['access_level'] == "student"){
-//                            echo $award_name;
-//                        }
-
-                        ?>
-                    </strong>
-                    <div class="year">
-                        <?php
-                        include "php/user_details.php";
-                        if($access_level == "student"){
-                            echo "<small>Year ".$user_result['year']."</small>";
-                        }else{
-                        }
-
-
-                        ?>
-                    </div>
+    <div class="main" id="content">
+        <div class="box" id="box-one">
+            <div class="box-header">
+                <strong>
+                    <?php
+                    include "php/club_functions.php";
+                    include "php/init.php";
+                    echo get_club_name($conn, $_GET['club_id']);
+                    switch ($_GET['function']){
+                        case 'add': echo "<div class='year'><small>Add Member</small></div>"; break;
+                        case 'send': echo "<div class='year'><small>Send Message</small></div>"; break;
+                        case 'remove': echo "<div class='year'><small>Remove Member</small></div>"; break;
+                    }
+                    ?>
+                </strong>
+            </div>
+            <div class="box-content">
+                <div class="main-title">
                 </div>
-                <div class="box-content">
-                    <div class="main-title">
-                        My Modules
-                    </div>
-                    <div class="box-data">
+                <div class="box-data" style="text-align: left">
+                    <form style="border: 0" action="php/club_functions.php" method="POST">
                             <?php
-                            include "php/init.php";
-                            include "php/fetch_notes.php";
-
-                            load_material($_SESSION['id'], $_GET['module_id'], $conn);
-                            
+                            select_function($_GET['function'],$_GET['club_id'],$conn);
                             ?>
+                        <input type="hidden" name="club_id" value="<?php echo $_GET['club_id']?>">
+                        <input type="hidden" name="function" value="<?php echo $_GET['function']?>">
 
-                    </div>
+                        
+                    </form>
+
+
+
                 </div>
             </div>
         </div>
+    </div>
 </div>
-<!-- <script type="text/javascript" src="script.js"></script> -->
 
 </body>
 </html>

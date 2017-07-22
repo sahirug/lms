@@ -5,7 +5,7 @@
         "Timetable" => ["Timetable","fa fa-calendar", "#"],
 //        "Assignments" => ["Upload Assignments", "fa fa-upload", "#"],
 //        "Results" => ["Results", "fa fa-university", "#"],
-        "Clubs" => ["Clubs", "fa fa-users", "#"],
+        "Clubs" => ["Clubs", "fa fa-users", "clubs.php"],
         "Settings" => ["Amend Personal Data", "fa fa-user", "#"],
         "Logout" => ["Logout", "fa fa-sign-out", "php/logout.php"],
     );

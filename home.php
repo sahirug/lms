@@ -120,7 +120,7 @@
                             <tr style="border-bottom: 1px solid black;">
                                 <td>Module ID</td>
                                 <td>Module Name</td>
-                                <?php if ($_SESSION['access_level'] == "student") echo "<td>Lecturer ID</td>"?>
+                                <?php if ($_SESSION['access_level'] == "student") echo "<td>Lecturer Name</td>"?>
                             </tr>
                             <?php
                             include "php/init.php";
