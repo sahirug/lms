@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clubs</title>
+    <title>View Messages</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="fonts/font-awesome.min.css">
     <script type="text/javascript" src="js/script.js"></script>
@@ -73,7 +73,7 @@
         <div class="box" id="box-one">
             <div class="box-header">
                 <strong>
-                    Clubs
+                    Messages
                 </strong>
             </div>
             <div class="box-content">
@@ -82,9 +82,9 @@
                 <div class="box-data">
                     <?php
                     include "php/init.php";
-                    include "php/load_clubs.php";
+                    include "php/load_messages.php";
 
-                    load_clubs($conn, $_SESSION['id']);
+                    load_all_messages($conn, $_GET['club_id'], $_SESSION['id']);
 
 
                     ?>

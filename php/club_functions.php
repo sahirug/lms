@@ -33,19 +33,21 @@ function send_message_page(){
 }
 
 function send_message($club_id, $message_title, $message_body, $conn){
+    session_start();
     $sql = "INSERT INTO message(club_id, message_title, message_body) VALUES ('$club_id','$message_title','$message_body');";
-    $conn->query($sql);
-    $sql = "SELECT message_id FROM message WHERE club_id = '$club_id'";
+    $flag = $conn->query($sql);
+    if(!$flag) die($conn->error);
+    $sql = "SELECT message_id FROM message ORDER BY message_id DESC LIMIT 1";
     $results = $conn->query($sql);
-    $message_id = "";
-    while($row = $results->fetch_assoc()){
-        $message_id = $row['message_id'];
-    }
+    $results = $results->fetch_assoc();
+    $message_id = $results['message_id'];
+    echo $message_id."<br>";
     $sql = "SELECT student_id FROM club_has_members WHERE club_id = '$club_id'";
     $results = $conn->query($sql);
     while($row = $results->fetch_assoc()){
         $student_id = $row['student_id'];
         if($student_id !== $_SESSION['id']){
+            echo $student_id;
             $sql = "INSERT INTO message_has_member(message_id, student_id, club_id, status) VALUES('$message_id', '$student_id', '$club_id', 'Unread')";
             $flag = $conn->query($sql);
             if(!$flag){

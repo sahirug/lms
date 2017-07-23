@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ca364cb0-aaf0-4d46-9e38-218f4eaa96f1" name="Default" comment="">
+    <list default="true" id="ca364cb0-aaf0-4d46-9e38-218f4eaa96f1" name="Default" comment="updated database">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/lms.sql" afterPath="$PROJECT_DIR$/db/lms.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/add_material.php" afterPath="$PROJECT_DIR$/add_material.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/club_page.php" afterPath="$PROJECT_DIR$/club_page.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/clubs.php" afterPath="$PROJECT_DIR$/clubs.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home.php" afterPath="$PROJECT_DIR$/home.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login.php" afterPath="$PROJECT_DIR$/login.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module.php" afterPath="$PROJECT_DIR$/module.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/club_functions.php" afterPath="$PROJECT_DIR$/php/club_functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/load_clubs.php" afterPath="$PROJECT_DIR$/php/load_clubs.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/sidebar_arrays.php" afterPath="$PROJECT_DIR$/php/sidebar_arrays.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/user_details.php" afterPath="$PROJECT_DIR$/php/user_details.php" />
     </list>
     <ignored path="LMS.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,26 +47,19 @@
       <file leaf-file-name="login.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="541">
-              <caret line="92" column="38" selection-start-line="92" selection-start-column="38" selection-end-line="92" selection-end-column="38" />
-              <folding>
-                <marker date="1500635292540" expanded="true" signature="2556:2601" ph="SELECT * FRO... user" />
-                <marker date="1500635292540" expanded="true" signature="2701:2771" ph="SELECT * FRO... user" />
-              </folding>
+            <state relative-caret-position="585">
+              <caret line="91" column="18" selection-start-line="91" selection-start-column="18" selection-end-line="91" selection-end-column="18" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add_material.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/add_material.php">
+      <file leaf-file-name="module.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/module.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2115">
-              <caret line="141" column="82" selection-start-line="141" selection-start-column="67" selection-end-line="141" selection-end-column="82" />
-              <folding>
-                <marker date="1500669593439" expanded="true" signature="1756:1768" ph="..." />
-                <marker date="1500669593439" expanded="true" signature="2606:2619" ph="..." />
-                <marker date="1500669593439" expanded="true" signature="3123:3136" ph="..." />
-              </folding>
+            <state relative-caret-position="1545">
+              <caret line="114" column="26" selection-start-line="113" selection-start-column="26" selection-end-line="114" selection-end-column="55" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -64,42 +67,18 @@
       <file leaf-file-name="home.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1830">
-              <caret line="122" column="105" selection-start-line="122" selection-start-column="105" selection-end-line="122" selection-end-column="105" />
+            <state relative-caret-position="1350">
+              <caret line="90" column="21" selection-start-line="0" selection-start-column="0" selection-end-line="149" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="upload.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/php/upload.php">
+      <file leaf-file-name="template.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/template.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="115" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="115" />
-              <folding>
-                <marker date="1500659413440" expanded="true" signature="751:957" ph="INSERT INTO lecture_notes... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="855">
-              <caret line="57" column="1" selection-start-line="57" selection-start-column="1" selection-end-line="57" selection-end-column="1" />
-              <folding>
-                <marker date="1500735254924" expanded="true" signature="2615:3101" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sidebar_arrays.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/php/sidebar_arrays.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="49" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
+            <state relative-caret-position="60">
+              <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -130,21 +109,31 @@
         <option value="$PROJECT_DIR$/template.php" />
         <option value="$PROJECT_DIR$/php/arrays.php" />
         <option value="$PROJECT_DIR$/js/script.js" />
-        <option value="$PROJECT_DIR$/login.php" />
         <option value="$PROJECT_DIR$/php/upload.php" />
-        <option value="$PROJECT_DIR$/php/user_details.php" />
         <option value="$PROJECT_DIR$/php/module_details.php" />
         <option value="$PROJECT_DIR$/php/fetch_notes.php" />
-        <option value="$PROJECT_DIR$/add_material.php" />
         <option value="$PROJECT_DIR$/php/logout.php" />
-        <option value="$PROJECT_DIR$/module.php" />
         <option value="$PROJECT_DIR$/home.php" />
-        <option value="$PROJECT_DIR$/clubs.php" />
-        <option value="$PROJECT_DIR$/php/sidebar_arrays.php" />
-        <option value="$PROJECT_DIR$/css/style.css" />
-        <option value="$PROJECT_DIR$/php/load_clubs.php" />
-        <option value="$PROJECT_DIR$/club_page.php" />
         <option value="$PROJECT_DIR$/php/club_functions.php" />
+        <option value="$PROJECT_DIR$/css/style.css" />
+        <option value="$PROJECT_DIR$/php/get_contact.php" />
+        <option value="$PROJECT_DIR$/php/update_contact.php" />
+        <option value="$PROJECT_DIR$/php/user_details.php" />
+        <option value="$PROJECT_DIR$/dash.php" />
+        <option value="$PROJECT_DIR$/php/load_students.php" />
+        <option value="$PROJECT_DIR$/php/sidebar_arrays.php" />
+        <option value="$PROJECT_DIR$/php/crud_club.php" />
+        <option value="$PROJECT_DIR$/php/load_clubs.php" />
+        <option value="$PROJECT_DIR$/add_material.php" />
+        <option value="$PROJECT_DIR$/club_page.php" />
+        <option value="$PROJECT_DIR$/clubs.php" />
+        <option value="$PROJECT_DIR$/messages.php" />
+        <option value="$PROJECT_DIR$/module.php" />
+        <option value="$PROJECT_DIR$/root_clubs.php" />
+        <option value="$PROJECT_DIR$/settings.php" />
+        <option value="$PROJECT_DIR$/view_message.php" />
+        <option value="$PROJECT_DIR$/php/load_messages.php" />
+        <option value="$PROJECT_DIR$/login.php" />
       </list>
     </option>
   </component>
@@ -205,34 +194,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="lms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -325,7 +286,9 @@
       <workItem from="1500633301221" duration="19035000" />
       <workItem from="1500671397573" duration="410000" />
       <workItem from="1500715449539" duration="28734000" />
-      <workItem from="1500758809270" duration="137000" />
+      <workItem from="1500758809270" duration="317000" />
+      <workItem from="1500798354115" duration="21894000" />
+      <workItem from="1500844551675" duration="221000" />
     </task>
     <task id="LOCAL-00001" summary="fixed div main overflowing on mobile">
       <created>1499277105881</created>
@@ -397,17 +360,24 @@
       <option name="project" value="LOCAL" />
       <updated>1500758868228</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="updated database">
+      <created>1500758960262</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1500758960262</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="174749000" />
+    <option name="totallyTimeSpent" value="197044000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17965023" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17885533" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -450,7 +420,8 @@
     <MESSAGE value="landing page, loading user modules" />
     <MESSAGE value="upload/download lecture notes, sort notes by batch, logout" />
     <MESSAGE value="implemented club functions: add member, remove member, send message" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented club functions: add member, remove member, send message" />
+    <MESSAGE value="updated database" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated database" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -459,15 +430,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.html" />
-    <entry file="file://$PROJECT_DIR$/dash.html" />
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1740">
-          <caret line="116" column="0" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
-          <folding>
-            <marker date="1500735254924" expanded="true" signature="2615:3101" ph="{...}" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -476,9 +442,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1500735254924" expanded="true" signature="2615:3101" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -487,9 +450,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1500735254924" expanded="true" signature="2615:3101" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -498,9 +458,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1500735254924" expanded="true" signature="2615:3101" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -509,53 +466,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1500735254924" expanded="true" signature="2615:3101" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html" />
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1500735254924" expanded="true" signature="2615:3101" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html" />
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1500735254924" expanded="true" signature="2615:3101" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html" />
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1500735254924" expanded="true" signature="2615:3101" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html" />
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1500735254924" expanded="true" signature="2615:3101" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -582,20 +492,6 @@
     <entry file="file://$PROJECT_DIR$/dash.html" />
     <entry file="file://$PROJECT_DIR$/php/login.php" />
     <entry file="file://$PROJECT_DIR$/php/index.php" />
-    <entry file="file://$PROJECT_DIR$/template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/style1.css" />
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5/tables.rnc" />
     <entry file="file://$PROJECT_DIR$/php/logout.php">
@@ -612,43 +508,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/module.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1319">
-          <caret line="104" column="55" selection-start-line="104" selection-start-column="55" selection-end-line="104" selection-end-column="55" />
-          <folding>
-            <marker date="1500718579479" expanded="true" signature="1756:1768" ph="..." />
-            <marker date="1500718579479" expanded="true" signature="2608:2621" ph="..." />
-            <marker date="1500718579479" expanded="true" signature="3125:3138" ph="..." />
-            <marker date="1500718579479" expanded="true" signature="4346:4695" ph="..." />
-            <marker date="1500718579479" expanded="true" signature="4391:4453" ph="..." />
-            <marker date="1500718579479" expanded="true" signature="4496:4695" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/user_details.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="808">
-          <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/fetch_notes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clubs.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="57" column="50" selection-start-line="57" selection-start-column="50" selection-end-line="57" selection-end-column="50" />
-          <folding>
-            <marker date="1500729600026" expanded="true" signature="1647:1660" ph="..." />
-            <marker date="1500729600026" expanded="true" signature="2164:2177" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -659,89 +522,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/add_material.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2115">
-          <caret line="141" column="82" selection-start-line="141" selection-start-column="67" selection-end-line="141" selection-end-column="82" />
-          <folding>
-            <marker date="1500669593439" expanded="true" signature="1756:1768" ph="..." />
-            <marker date="1500669593439" expanded="true" signature="2606:2619" ph="..." />
-            <marker date="1500669593439" expanded="true" signature="3123:3136" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/upload.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="26" column="115" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="115" />
-          <folding>
-            <marker date="1500659413440" expanded="true" signature="751:957" ph="INSERT INTO lecture_notes... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1830">
-          <caret line="122" column="105" selection-start-line="122" selection-start-column="105" selection-end-line="122" selection-end-column="105" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/sidebar_arrays.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="49" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/load_clubs.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
-          <folding>
-            <marker date="1500730177276" expanded="true" signature="72:327" ph="SELECT club.... club" />
-            <marker date="1500730177276" expanded="true" signature="731:1183" ph="..." />
-            <marker date="1500730177276" expanded="true" signature="818:846" ph="..." />
-            <marker date="1500730177276" expanded="true" signature="968:995" ph="..." />
-            <marker date="1500730177276" expanded="true" signature="1121:1146" ph="..." />
-            <marker date="1500730177276" expanded="true" signature="1313:1339" ph="..." />
-            <marker date="1500730177276" expanded="true" signature="1424:1442" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="57" column="1" selection-start-line="57" selection-start-column="1" selection-end-line="57" selection-end-column="1" />
-          <folding>
-            <marker date="1500735254924" expanded="true" signature="2615:3101" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/club_page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="568">
-          <caret line="98" column="24" selection-start-line="98" selection-start-column="24" selection-end-line="98" selection-end-column="24" />
-          <folding>
-            <marker date="1500750100336" expanded="true" signature="1647:1660" ph="..." />
-            <marker date="1500750100336" expanded="true" signature="2164:2177" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="92" column="38" selection-start-line="92" selection-start-column="38" selection-end-line="92" selection-end-column="38" />
-          <folding>
-            <marker date="1500635292540" expanded="true" signature="2556:2601" ph="SELECT * FRO... user" />
-            <marker date="1500635292540" expanded="true" signature="2701:2771" ph="SELECT * FRO... user" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -752,45 +536,168 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/php/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="387" column="34" selection-start-line="387" selection-start-column="34" selection-end-line="387" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/get_contact.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="63" selection-start-line="8" selection-start-column="63" selection-end-line="8" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/update_contact.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/user_details.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/load_students.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="66" selection-start-line="3" selection-start-column="66" selection-end-line="3" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/php/club_functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-          <folding>
-            <marker date="1500758597967" expanded="true" signature="456:498" ph="SELECT club_... club" />
-            <marker date="1500758597967" expanded="true" signature="456:499" ph="SELECT club_... club" />
-            <marker date="1500758597967" expanded="true" signature="989:1043" ph="..." />
-            <marker date="1500758597967" expanded="true" signature="1191:1201" ph="..." />
-            <marker date="1500758597967" expanded="true" signature="1238:1255" ph="..." />
-            <marker date="1500758597967" expanded="true" signature="1314:1368" ph="..." />
-            <marker date="1500758597967" expanded="true" signature="1461:1511" ph="..." />
-            <marker date="1500758597967" expanded="true" signature="1656:1694" ph="..." />
-            <marker date="1500758597967" expanded="true" signature="1785:1895" ph="INSERT INTO message... " />
-            <marker date="1500758597967" expanded="true" signature="1935:1957" ph="SELECT stude... " />
-            <marker date="1500758597967" expanded="true" signature="1935:1992" ph="SELECT stude... club_has_members" />
-            <marker date="1500758597967" expanded="true" signature="2155:2221" ph="SELECT stude... club_has_members" />
-            <marker date="1500758597967" expanded="true" signature="2409:2539" ph="INSERT INTO message_has_member... " />
-            <marker date="1500758597967" expanded="true" signature="2808:3084" ph="select DISTI... student" />
-            <marker date="1500758597967" expanded="true" signature="2808:3112" ph="select DISTI... student" />
-            <marker date="1500758597967" expanded="true" signature="3019:3075" ph="SELECT stude... club_has_members" />
-            <marker date="1500758597967" expanded="true" signature="3220:3274" ph="..." />
-            <marker date="1500758597967" expanded="true" signature="3398:3452" ph="..." />
-            <marker date="1500758597967" expanded="true" signature="3664:3675" ph="..." />
-            <marker date="1500758597967" expanded="true" signature="3746:3844" ph="INSERT INTO club_has_members... " />
-            <marker date="1500758597967" expanded="true" signature="4043:5506" ph="..." />
-            <marker date="1500758597967" expanded="true" signature="4130:5095" ph="{...}" />
-            <marker date="1500758597967" expanded="true" signature="4144:4457" ph="SELECT DISTI... student" />
-            <marker date="1500758597967" expanded="true" signature="4150:4457" ph="select DISTI... student" />
-            <marker date="1500758597967" expanded="true" signature="4356:4412" ph="select stude... club_has_members" />
-            <marker date="1500758597967" expanded="true" signature="4565:4619" ph="..." />
-            <marker date="1500758597967" expanded="true" signature="4743:4797" ph="..." />
-            <marker date="1500758597967" expanded="true" signature="5055:5089" ph="..." />
-            <marker date="1500758597967" expanded="true" signature="5163:5224" ph="DELETE FROM " />
-            <marker date="1500758597967" expanded="true" signature="5163:5228" ph="DELETE FROM " />
-            <marker date="1500758597967" expanded="true" signature="5163:5229" ph="DELETE FROM " />
-            <marker date="1500758597967" expanded="true" signature="5163:5249" ph="DELETE FROM " />
-            <marker date="1500758597967" expanded="true" signature="5174:5191" ph="INSERT INTO club_has_members... " />
-          </folding>
+        <state relative-caret-position="600">
+          <caret line="79" column="111" selection-start-line="79" selection-start-column="46" selection-end-line="79" selection-end-column="113" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/sidebar_arrays.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="50" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/crud_club.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="62" selection-start-line="16" selection-start-column="62" selection-end-line="16" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/load_clubs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="97" selection-start-line="7" selection-start-column="97" selection-end-line="7" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/add_material.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/club_page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clubs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1350">
+          <caret line="90" column="21" selection-start-line="0" selection-start-column="0" selection-end-line="149" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/messages.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1545">
+          <caret line="114" column="26" selection-start-line="113" selection-start-column="26" selection-end-line="114" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/root_clubs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view_message.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="84" column="36" selection-start-line="84" selection-start-column="36" selection-end-line="85" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/load_messages.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="97" selection-start-line="8" selection-start-column="97" selection-end-line="8" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dash.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="614">
+          <caret line="84" column="51" selection-start-line="84" selection-start-column="51" selection-end-line="84" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="91" column="18" selection-start-line="91" selection-start-column="18" selection-end-line="91" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>

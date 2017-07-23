@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clubs</title>
+    <title>Home</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="fonts/font-awesome.min.css">
     <script type="text/javascript" src="js/script.js"></script>
@@ -29,7 +29,7 @@
                 <a href="#" onclick="openNav()" class="menu-link"><img src="images/menu1.png" class="menu-icon"></a>
             </div>
             <span class="user-name">
-                <?php echo isset($_SESSION['username'])?$_SESSION['username']:'no user'; ?>
+                <?php echo isset($_SESSION['username'])?$_SESSION['id']:'no user'; ?>
             </span>
 
 
@@ -63,6 +63,14 @@
                         echo "</a>";
                         echo "</li>";
                     }
+                }else if(isset($_SESSION['access_level']) && $_SESSION['access_level'] == "root" ){
+                    foreach ($sidebar_array_root as $sidebar_item) {
+                        echo "<li class='sidebar-item'>";
+                        echo "<a href='$sidebar_item[2]' class='link'>";
+                        echo "<i class='$sidebar_item[1]'></i><span style='padding: 10px'>$sidebar_item[0]</span>";
+                        echo "</a>";
+                        echo "</li>";
+                    }
                 }
                 ?>
             </ul>
@@ -73,26 +81,39 @@
         <div class="box" id="box-one">
             <div class="box-header">
                 <strong>
-                    Clubs
-                </strong>
-            </div>
-            <div class="box-content">
-                <div class="main-title">
-                </div>
-                <div class="box-data">
                     <?php
-                    include "php/init.php";
-                    include "php/load_clubs.php";
+                    include "php/user_details.php";
+                    echo $award_name;
+                    //                        if ($_SESSION['access_level'] == "student"){
+                    //                            echo $award_name;
+                    //                        }
 
-                    load_clubs($conn, $_SESSION['id']);
+                    ?>
+                </strong>
+                <div class="year">
+                    <?php
+                    if($access_level == "student"){
+                        echo "<small>Year ".$user_result['year']."</small>";
+                    }else{
+                        echo "";
+                    }
 
 
                     ?>
                 </div>
             </div>
+            <div class="box-content">
+                <div class="main-title">
+                    My Modules
+                </div>
+                <div class="box-data">
+                    
+                </div>
+            </div>
         </div>
     </div>
 </div>
+<!-- <script type="text/javascript" src="script.js"></script> -->
 
 </body>
 </html>

@@ -30,6 +30,8 @@ if($results->num_rows > 0){
         $award_name = $results['award_name'];
     }else if($access_level == "lec"){
         $award_name = "Senior Lecturer";
+    }else{
+        $award_name = "root";
     }
 //    echo $award_name;
     if($access_level == "student"){

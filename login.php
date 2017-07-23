@@ -84,7 +84,11 @@
                 $_SESSION['username'] = $username;
                 $_SESSION['access_level'] = $access_level;
                 $_SESSION['id'] = $id;
-                header("Location: home.php");
+                if($access_level == 'root'){
+                    header("Location: dash.php");
+                }else{
+                    header("Location: home.php");
+                }
             }else{
                 echo "<script>showError('password');</script>";
             }

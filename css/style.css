@@ -385,7 +385,7 @@ select{
     font-family: Neuzeit;
 }
 
-input[type=file]{
+input[type=file], input[type=email]{
     font-family: Neuzeit;
 }
 
@@ -413,6 +413,12 @@ input[type=file]{
     margin-top: 20px;
     margin-bottom: 20px;
     /*border: 1px solid red;*/
+}
+
+.message-body{
+    border: 1px solid grey;
+    border-radius: 5px;
+    margin: 10px;
 }
 
 /*======================================================TEMPLATE CSS (END)===============================================================*/

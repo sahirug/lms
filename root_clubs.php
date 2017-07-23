@@ -63,6 +63,14 @@
                         echo "</a>";
                         echo "</li>";
                     }
+                }else if(isset($_SESSION['access_level']) && $_SESSION['access_level'] == "root" ){
+                    foreach ($sidebar_array_root as $sidebar_item) {
+                        echo "<li class='sidebar-item'>";
+                        echo "<a href='$sidebar_item[2]' class='link'>";
+                        echo "<i class='$sidebar_item[1]'></i><span style='padding: 10px'>$sidebar_item[0]</span>";
+                        echo "</a>";
+                        echo "</li>";
+                    }
                 }
                 ?>
             </ul>
@@ -72,27 +80,52 @@
     <div class="main" id="content">
         <div class="box" id="box-one">
             <div class="box-header">
-                <strong>
-                    Clubs
-                </strong>
+                <strong>Add New Club</strong>
             </div>
             <div class="box-content">
                 <div class="main-title">
+
                 </div>
-                <div class="box-data">
-                    <?php
-                    include "php/init.php";
-                    include "php/load_clubs.php";
+                <div class="box-data-content">
+                    <div>
+                        <form method="POST" action="php/crud_club.php" style="border: none; margin-top: 25px;" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label for="clubname" class="textfield-label">Club Name</label>
+                                <input type="text" class="medium-size form-text-field" name="clubname" id="clubname"
+                                       placeholder="Club Name" required/>
+                            </div>
 
-                    load_clubs($conn, $_SESSION['id']);
+                            <div class="form-group">
+                                <label class="textfield-label">President</label>
+                                <select class="medium-size form-text-field" name="president">
+                                    <?php
+                                    include "php/init.php";
+                                    include "php/load_students.php";
+                                    load_students($conn);
+                                    ?>
+                                </select>
+                            </div>
 
+                            <div class="form-group">
+                                <label class="textfield-label">Category</label>
+                                <select class="medium-size form-text-field" name="category">
+                                    <option>Sports</option>
+                                    <option>Entertainment</option>
+                                    <option>Community Service</option>
+                                </select>
+                            </div>
 
-                    ?>
+                            <div class="form-group">
+                                <input type="submit" class="login-submit" value="Add">
+                            </div>
+
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
+<!-- <script type="text/javascript" src="script.js"></script> -->
 </body>
 </html>
