@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 22, 2017 at 11:28 PM
+-- Generation Time: Jul 23, 2017 at 11:43 PM
 -- Server version: 10.1.10-MariaDB
 -- PHP Version: 5.6.19
 
@@ -140,7 +140,8 @@ INSERT INTO `club` (`club_id`, `club_name`, `president`, `category`) VALUES
 (3, 'Movie Club', 'ST003', 'Entertainment'),
 (4, 'Badminton', 'ST004', 'Sports'),
 (5, 'Charity Club', 'ST005', 'Community Service'),
-(6, 'Gamers Club', 'ST006', 'Entertainment');
+(6, 'Gamers Club', 'ST006', 'Entertainment'),
+(9, 'Acting Club', 'ST001', 'Entertainment');
 
 -- --------------------------------------------------------
 
@@ -185,7 +186,10 @@ INSERT INTO `club_has_members` (`club_id`, `student_id`, `role`) VALUES
 (2, 'ST002', 'President'),
 (3, 'ST002', 'Member'),
 (3, 'ST003', 'President'),
-(4, 'ST003', 'Member');
+(4, 'ST003', 'Member'),
+(9, 'ST001', 'President'),
+(9, 'ST002', 'Member'),
+(9, 'ST006', 'Member');
 
 -- --------------------------------------------------------
 
@@ -204,7 +208,8 @@ CREATE TABLE `faculty` (
 
 INSERT INTO `faculty` (`faculty_id`, `faculty_name`) VALUES
 ('F01', 'business'),
-('F02', 'engineering');
+('F02', 'engineering'),
+('F03', 'Admin');
 
 -- --------------------------------------------------------
 
@@ -254,7 +259,10 @@ CREATE TABLE `message` (
 --
 
 INSERT INTO `message` (`message_id`, `club_id`, `message_title`, `message_body`) VALUES
-(13, 3, 'safasfsa', 'fsafsafasfasfa');
+(28, 1, 'Match on 21st', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer '),
+(29, 2, 'Hi all', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer '),
+(30, 9, 'Welcome', 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout'),
+(31, 9, 'Bye', 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout');
 
 -- --------------------------------------------------------
 
@@ -274,12 +282,15 @@ CREATE TABLE `message_has_member` (
 --
 
 INSERT INTO `message_has_member` (`message_id`, `student_id`, `club_id`, `status`) VALUES
-(13, 'ST001', 3, 'Unread'),
-(13, 'ST002', 3, 'Unread'),
-(13, 'ST003', 3, 'Unread'),
-(13, 'ST004', 3, 'Unread'),
-(13, 'ST008', 3, 'Unread'),
-(13, 'ST009', 3, 'Unread');
+(28, 'ST005', 1, 'Unread'),
+(28, 'ST006', 1, 'Read'),
+(28, 'ST007', 1, 'Unread'),
+(28, 'ST012', 1, 'Unread'),
+(29, 'ST001', 2, 'Read'),
+(29, 'ST007', 2, 'Unread'),
+(29, 'ST008', 2, 'Unread'),
+(30, 'ST002', 9, 'Read'),
+(31, 'ST002', 9, 'Unread');
 
 -- --------------------------------------------------------
 
@@ -432,7 +443,8 @@ INSERT INTO `staff` (`staff_id`, `staff_name`, `email`, `faculty`, `telephone`) 
 ('SF007', 'Tim Duncan', 'tduncan@uni.com', 'F01', '0147963541'),
 ('SF008', 'Manu Ginobili', 'mginobili@uni.com', 'F02', '0159874563'),
 ('SF009', 'Patrick Mills', 'pmills@uni.com', 'F01', '0365987452'),
-('SF010', 'Derrick White', 'dwhite@uni.com', 'F02', '0178965412');
+('SF010', 'Derrick White', 'dwhite@uni.com', 'F02', '0178965412'),
+('ST011', 'Greg Popovich', 'gpopo@uni.com', 'F03', '6465410002');
 
 -- --------------------------------------------------------
 
@@ -462,7 +474,7 @@ INSERT INTO `student` (`student_id`, `student_name`, `email`, `faculty`, `year`,
 ('ST003', 'Kevin Durant', 'kdurant@gmail.com', 'F01', 1, '16.2A', 'SOB_01', '1994-10-02', '0154876454'),
 ('ST004', 'Draymond Green', 'dgreen@gmail.com', 'F01', 2, '15.2A', 'SOB_02', '1994-11-02', '0215487652'),
 ('ST005', 'Klay Thompson', 'kthompson@gmail.com', 'F01', 2, '15.2B', 'SOB_02', '1993-10-02', '0145698745'),
-('ST006', 'Steve Kerr', 'skerr@gmail.com', 'F01', 3, '14.2A', 'SOB_02', '1991-10-02', '4548796512'),
+('ST006', 'Steve Kerr', 'skerr@gmail.com', 'F01', 3, '14.2A', 'SOB_02', '1991-10-02', '987654321'),
 ('ST007', 'James Harden', 'jharden@gmail.com', 'F01', 3, '14.2B', 'SOB_01', '1991-11-02', '4598786532'),
 ('ST008', 'Mike Conley', 'mconley@gmail.com', 'F02', 1, '16.2B', 'SOC_01', '1994-10-02', '0154876454'),
 ('ST009', 'Jeremy Lin', 'jlin@gmail.com', 'F02', 2, '15.2A', 'SOC_02', '1994-11-02', '0215487652'),
@@ -507,6 +519,7 @@ INSERT INTO `user` (`student_id`, `staff_id`, `username`, `password`, `access_le
 ('ST011', NULL, 'mjack', '123', 'student'),
 (NULL, 'SF006', 'pgasol', '123', 'lec'),
 (NULL, 'SF009', 'pmills', '123', 'lec'),
+(NULL, 'ST011', 'root', '123', 'root'),
 ('ST002', NULL, 'scurry', '123', 'student'),
 ('ST006', NULL, 'skerr', '123', 'student'),
 (NULL, 'SF007', 'tduncan', '123', 'lec'),
@@ -641,17 +654,17 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `club`
 --
 ALTER TABLE `club`
-  MODIFY `club_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `club_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `lecture_notes`
 --
 ALTER TABLE `lecture_notes`
-  MODIFY `note_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `note_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT for table `message`
 --
 ALTER TABLE `message`
-  MODIFY `message_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `message_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 --
 -- Constraints for dumped tables
 --

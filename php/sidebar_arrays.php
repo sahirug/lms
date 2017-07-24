@@ -18,6 +18,7 @@
     );
 
     $sidebar_array_root = array(
+        "Add" => ["Add User","fa fa-user-plus", "#"],
         "Modules" => ["Modules","fa fa-book", "home.php"],
         "Clubs" => ["Clubs", "fa fa-users", "root_clubs.php"],
         "Settings" => ["Amend Personal Data", "fa fa-user", "settings.php"],

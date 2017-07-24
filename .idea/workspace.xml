@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ca364cb0-aaf0-4d46-9e38-218f4eaa96f1" name="Default" comment="updated database">
+    <list default="true" id="ca364cb0-aaf0-4d46-9e38-218f4eaa96f1" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/select_user_type.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/add_material.php" afterPath="$PROJECT_DIR$/add_material.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/club_page.php" afterPath="$PROJECT_DIR$/club_page.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/clubs.php" afterPath="$PROJECT_DIR$/clubs.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home.php" afterPath="$PROJECT_DIR$/home.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login.php" afterPath="$PROJECT_DIR$/login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module.php" afterPath="$PROJECT_DIR$/module.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/club_functions.php" afterPath="$PROJECT_DIR$/php/club_functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/load_clubs.php" afterPath="$PROJECT_DIR$/php/load_clubs.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/lms.sql" afterPath="$PROJECT_DIR$/db/lms.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/sidebar_arrays.php" afterPath="$PROJECT_DIR$/php/sidebar_arrays.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/user_details.php" afterPath="$PROJECT_DIR$/php/user_details.php" />
     </list>
     <ignored path="LMS.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,6 +20,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -44,11 +37,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="login.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/login.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="585">
               <caret line="91" column="18" selection-start-line="91" selection-start-column="18" selection-end-line="91" selection-end-column="18" />
+              <folding>
+                <marker date="1500836375455" expanded="true" signature="2556:2601" ph="SELECT * FRO... user" />
+                <marker date="1500836375455" expanded="true" signature="2701:2771" ph="SELECT * FRO... user" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sidebar_arrays.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/sidebar_arrays.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="select_user_type.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/select_user_type.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -57,7 +73,7 @@
       <file leaf-file-name="module.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/module.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1545">
+            <state relative-caret-position="1710">
               <caret line="114" column="26" selection-start-line="113" selection-start-column="26" selection-end-line="114" selection-end-column="55" />
               <folding />
             </state>
@@ -121,7 +137,6 @@
         <option value="$PROJECT_DIR$/php/user_details.php" />
         <option value="$PROJECT_DIR$/dash.php" />
         <option value="$PROJECT_DIR$/php/load_students.php" />
-        <option value="$PROJECT_DIR$/php/sidebar_arrays.php" />
         <option value="$PROJECT_DIR$/php/crud_club.php" />
         <option value="$PROJECT_DIR$/php/load_clubs.php" />
         <option value="$PROJECT_DIR$/add_material.php" />
@@ -134,6 +149,7 @@
         <option value="$PROJECT_DIR$/view_message.php" />
         <option value="$PROJECT_DIR$/php/load_messages.php" />
         <option value="$PROJECT_DIR$/login.php" />
+        <option value="$PROJECT_DIR$/php/sidebar_arrays.php" />
       </list>
     </option>
   </component>
@@ -178,6 +194,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -194,12 +211,25 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="lms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lms" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="php" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -222,6 +252,17 @@
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
@@ -288,7 +329,8 @@
       <workItem from="1500715449539" duration="28734000" />
       <workItem from="1500758809270" duration="317000" />
       <workItem from="1500798354115" duration="21894000" />
-      <workItem from="1500844551675" duration="221000" />
+      <workItem from="1500844551675" duration="909000" />
+      <workItem from="1500881337853" duration="1790000" />
     </task>
     <task id="LOCAL-00001" summary="fixed div main overflowing on mobile">
       <created>1499277105881</created>
@@ -367,19 +409,27 @@
       <option name="project" value="LOCAL" />
       <updated>1500758960262</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="added view message function and root user and functions">
+      <created>1500844847819</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1500844847819</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="197044000" />
+    <option name="totallyTimeSpent" value="199522000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17885533" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.178125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890624" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -393,7 +443,6 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890624" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -421,7 +470,8 @@
     <MESSAGE value="upload/download lecture notes, sort notes by batch, logout" />
     <MESSAGE value="implemented club functions: add member, remove member, send message" />
     <MESSAGE value="updated database" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated database" />
+    <MESSAGE value="added view message function and root user and functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="added view message function and root user and functions" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -430,13 +480,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html" />
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
@@ -585,13 +628,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/sidebar_arrays.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="50" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/crud_club.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -644,7 +680,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/module.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1545">
+        <state relative-caret-position="1710">
           <caret line="114" column="26" selection-start-line="113" selection-start-column="26" selection-end-line="114" selection-end-column="55" />
           <folding />
         </state>
@@ -697,6 +733,25 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="585">
           <caret line="91" column="18" selection-start-line="91" selection-start-column="18" selection-end-line="91" selection-end-column="18" />
+          <folding>
+            <marker date="1500836375455" expanded="true" signature="2556:2601" ph="SELECT * FRO... user" />
+            <marker date="1500836375455" expanded="true" signature="2701:2771" ph="SELECT * FRO... user" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/sidebar_arrays.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/select_user_type.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
