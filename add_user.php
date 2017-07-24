@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Select User Type</title>
+    <title>Add Lecture Notes</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="fonts/font-awesome.min.css">
     <script type="text/javascript" src="js/script.js"></script>
@@ -81,54 +81,41 @@
         <div class="box" id="box-one">
             <div class="box-header">
                 <strong>
-                    Select User Type
+                    <?php
+                    include "php/init.php";
+                    include "php/load_students.php";
+                    echo load_user_name($_POST['user_type'], $_POST['id'], $conn);
+
+                    ?>
                 </strong>
                 <div class="year">
-
+                    
                 </div>
             </div>
             <div class="box-content">
                 <div class="main-title">
-                    Add Material
+
                 </div>
                 <div class="box-data-content">
                     <div>
-                        <form method="GET" action="select_user_type.php" style="border: none; margin-top: 25px;">
-
+                        <form method="POST" action="" style="border: none; margin-top: 25px;">
                             <div class="form-group">
-                                <div>
-                                    <label class="textfield-label" style='width: auto; margin-right: 25px; display: inline-block'>User Type</label>
-                                    <select class='medium-size form-text-field' name='user_type' style='width: 50%; margin-right: 25px; display: inline-block;' required>
-                                        <?php
-                                        if(isset($_GET['user_type'])){
-                                            switch ($_GET['user_type']){
-                                                case 'Student': echo "<option>Student</option><option>Staff</option><option>root</option>";break;
-                                                case 'Staff': echo "<option>Staff</option><option>Student</option><option>root</option>";break;
-                                                case 'root': echo "<option>root</option><option>Student</option><option>Staff</option>";break;
-                                            }
-                                        }else{
-                                            echo "<option>Student</option><option>Staff</option><option>root</option>";
-                                        }
-
-                                        ?>
-                                    </select>
-                                    <input type='submit' value='Show ID' class='login-submit' style='width: 34%;'>
-                                </div>
+                                <label class="textfield-label">User Name</label>
+                                <input type="text" class="medium-size form-text-field" name="username"
+                                       placeholder="Username" required/>
                             </div>
 
-                        </form>
-                        <form action="add_user.php" method="POST" style="border: none; margin-top: 25px;">
-                            <?php
-    
-                            if (isset($_GET['user_type'])){
-                                include "php/init.php";
-                                include "php/load_students.php";
-                                $type = $_GET['user_type'];
-                                load_id($type, $conn);
-                                echo "<input type='hidden' value='$type' name='user_type'>";
-                            }
-    
-                            ?>
+                            <div>
+                                <label class="textfield-label">Password</label>
+                                <input type="password" class="medium-size form-text-field new-pass" name="password"
+                                       placeholder="Password" required/>
+                            </div>
+
+
+                            <div class="form-group">
+                                <input type="submit" class="login-submit" value="Add User">
+                            </div>
+
                         </form>
                     </div>
                 </div>

@@ -47,6 +47,11 @@ input[type=text]{
     font-size: 20px;
     text-align: center;
 }
+
+.new-pass::-webkit-input-placeholder{
+    font-weight: bold;
+    font-family: Neuzeit, Raleway;
+}
 /*:-moz-placeholder {*/
     /*font-family: Raleway;*/
 /*}*/
@@ -71,6 +76,14 @@ input[type=text]{
 
 .login-submit:hover {
     opacity: 0.8;
+}
+
+.login-submit:disabled{
+    background-color: grey;
+}
+
+.login-submit:disabled:hover{
+    opacity: 1.0;
 }
 
 .cancelbtn {
@@ -429,7 +442,9 @@ input[type=file], input[type=email]{
 
     /*===============================================LOGIN FORM CSS(MOBILE)==============================================================*/
 
-
+    .login-submit{
+        font-size: 18px;
+    }
 
     .wrapper{
         overflow: auto;

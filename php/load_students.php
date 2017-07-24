@@ -8,4 +8,58 @@ function load_students($conn){
     }
 }
 
+function load_id($type, $conn){
+    $sql = "";
+    if($type == "Student"){
+        $sql = "SELECT student_id FROM student WHERE student_id NOT IN (SELECT student_id FROM user WHERE student_id IS NOT NULL)";
+    }else{
+        $sql = "SELECT staff_id FROM staff WHERE staff_id NOT IN (SELECT staff_id FROM user WHERE staff_id IS NOT NULL)";
+    }
+    $results = $conn->query($sql);
+    if($results->num_rows == 0){
+        if($type == "Student"){
+            echo "<div><label for='student_id' class='textfield-label' style='width: auto; margin-right: 25px; display: inline-block'>Student ID</label></div>";
+        }else{
+            echo "<div><label for='student_id' class='textfield-label' style='width: auto; margin-right: 25px; display: inline-block'>Staff ID</label></div>";
+        }
+        echo "<select class='medium-size form-text-field' name='id' style='width: 50%; margin-right: 25px; display: inline-block;' required>";
+        echo "<option>No new user</option>";
+        echo "</select>";
+        echo "<input type='submit' value='Add' class='login-submit' style='width: 34%;' disabled>";
+    }else{
+        if($type == "Student"){
+            echo "<div><label for='student_id' class='textfield-label' style='width: auto; margin-right: 25px; display: inline-block'>Student ID</label></div>";
+        }else{
+            echo "<div><label for='student_id' class='textfield-label' style='width: auto; margin-right: 25px; display: inline-block'>Staff ID</label></div>";
+        }
+        echo "<select class='medium-size form-text-field' name='id' style='width: 50%; margin-right: 25px; display: inline-block;' required>";
+        if($type == "Student"){
+            while($row = $results->fetch_assoc()){
+                echo "<option>".$row['student_id']."</option>";
+            }
+        }else{
+            while($row = $results->fetch_assoc()){
+                echo "<option>".$row['staff_id']."</option>";
+            }
+        }
+        echo "</select>";
+        echo "<input type='submit' value='Add' class='login-submit' style='width: 34%;'>";
+    }
+}
+
+function load_user_name($type, $id, $conn){
+    $sql = "";
+    switch($type){
+        case 'Student': $sql = "SELECT student_name FROM student WHERE student_id = '$id'"; break;
+        case 'Staff': $sql = "SELECT staff_name FROM staff WHERE staff_id = '$id'"; break;
+    }
+    $results = $conn->query($sql);
+    $results = $results->fetch_assoc();
+    switch($type){
+        case 'Student': return $results['student_name']; break;
+        case 'Staff': return $results['staff_name']; break;
+    }
+    return "user not found";
+}
+
 ?>
