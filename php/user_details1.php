@@ -75,11 +75,11 @@ function draw_table($conn){
                 $module_name = $row['module_name'];
                 $staff_id = $row['staff_id'];
                 $staff_name = get_lecturer_name($conn, $staff_id);
-                echo "<tr><td>$module_id</td><td><a href='http://localhost/lms/module.php?module_id=$module_id'>$module_name</a></td><td>$staff_name</td></tr>";
+                echo "<tr><td>$module_id</td><td><a href='module.php?module_id=$module_id'>$module_name</a></td><td>$staff_name</td></tr>";
             }else{
                 $module_id = $row['module_id'];
                 $module_name = $row['module_name'];
-                echo "<tr><td>$module_id</td><td><a href='http://localhost/lms/module.php?module_id=$module_id'>$module_name</a></td></tr>";
+                echo "<tr><td>$module_id</td><td><a href='module.php?module_id=$module_id'>$module_name</a></td></tr>";
             }
         }
     }else{

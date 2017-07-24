@@ -29,7 +29,7 @@
 <body>
 
 <div class="card">
-    <form action="http://localhost/lms/login.php" method="post">
+    <form action="login.php" method="post">
         <div class="imgcontainer">
             <img src="images/ply_logo.jpg" alt="logo" class="ply-logo">
         </div>
