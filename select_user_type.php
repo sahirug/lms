@@ -102,12 +102,12 @@
                                         <?php
                                         if(isset($_GET['user_type'])){
                                             switch ($_GET['user_type']){
-                                                case 'Student': echo "<option>Student</option><option>Staff</option><option>root</option>";break;
-                                                case 'Staff': echo "<option>Staff</option><option>Student</option><option>root</option>";break;
-                                                case 'root': echo "<option>root</option><option>Student</option><option>Staff</option>";break;
+                                                case 'student': echo "<option>student</option><option>lec</option><option>root</option>";break;
+                                                case 'lec': echo "<option>lec</option><option>student</option><option>root</option>";break;
+                                                case 'root': echo "<option>root</option><option>student</option><option>lec</option>";break;
                                             }
                                         }else{
-                                            echo "<option>Student</option><option>Staff</option><option>root</option>";
+                                            echo "<option>student</option><option>lec</option><option>root</option>";
                                         }
 
                                         ?>
@@ -125,7 +125,7 @@
                                 include "php/load_students.php";
                                 $type = $_GET['user_type'];
                                 load_id($type, $conn);
-                                echo "<input type='hidden' value='$type' name='user_type'>";
+                                echo "<input type='hidden' value='$type' name='type'>";
                             }
     
                             ?>

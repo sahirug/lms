@@ -84,7 +84,7 @@
                     <?php
                     include "php/init.php";
                     include "php/load_students.php";
-                    echo load_user_name($_POST['user_type'], $_POST['id'], $conn);
+                    echo load_user_name($_POST['type'], $_POST['id'], $conn);
 
                     ?>
                 </strong>
@@ -98,7 +98,7 @@
                 </div>
                 <div class="box-data-content">
                     <div>
-                        <form method="POST" action="" style="border: none; margin-top: 25px;">
+                        <form method="POST" action="php/add_user.php" style="border: none; margin-top: 25px;">
                             <div class="form-group">
                                 <label class="textfield-label">User Name</label>
                                 <input type="text" class="medium-size form-text-field" name="username"
@@ -111,6 +111,8 @@
                                        placeholder="Password" required/>
                             </div>
 
+                            <input type="hidden" value="<?php echo $_POST['id']?>" name="id">
+                            <input type="hidden" value="<?php echo $_POST['type']?>" name="type">
 
                             <div class="form-group">
                                 <input type="submit" class="login-submit" value="Add User">

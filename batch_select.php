@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Update Contact Information</title>
+    <title>Select User Type</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="fonts/font-awesome.min.css">
     <script type="text/javascript" src="js/script.js"></script>
@@ -81,7 +81,7 @@
         <div class="box" id="box-one">
             <div class="box-header">
                 <strong>
-                    Update Contact Details
+                    Select User Type
                 </strong>
                 <div class="year">
 
@@ -89,28 +89,30 @@
             </div>
             <div class="box-content">
                 <div class="main-title">
-
+                    Add Material
                 </div>
                 <div class="box-data-content">
                     <div>
-                        <form method="POST" action="php/update_contact.php" style="border: none; margin-top: 25px;">
-                            <div class="form-group">
-                                <label for="tel_no" class="textfield-label">Telephone Number</label>
-                                <input type="text" class="medium-size form-text-field" name="tel_no" id="tel_no"
-                                       value="<?php include "php/init.php"; include "php/get_contact.php"; echo get_contact($conn, 'telephone');?>" placeholder="Contact Number" required/>
-                            </div>
-
-                            <div>
-                                <label for="email" class="textfield-label">Email Address</label>
-                                <input type="email" class="medium-size form-text-field topic-name" name="email" id="email"
-                                       value="<?php echo get_contact($conn, 'email')?>" placeholder="Email Address" required/>
-                            </div>
+                        <form method="POST" action="php/enroll_lec_module.php" style="border: none; margin-top: 25px;">
 
                             <div class="form-group">
-                                <input type="submit" class="login-submit" value="Update">
+                                <div>
+                                    <label class="textfield-label" style='width: auto; margin-right: 25px; display: inline-block'>Choose Faculty</label>
+                                    <select class='medium-size form-text-field' name='batch' style='width: 50%; margin-right: 25px; display: inline-block;' required>
+                                        <option>16.2A</option>
+                                        <option>16.2B</option>
+                                        <option>15.2A</option>
+                                        <option>15.2B</option>
+                                        <option>14.2A</option>
+                                        <option>14.2B</option>
+                                    </select>
+                                    <input type='hidden' value='<?php echo $_GET['id']?>' name="id">
+                                    <input type='submit' value='Show ID' class='login-submit' style='width: 34%;'>
+                                </div>
                             </div>
 
                         </form>
+
                     </div>
                 </div>
             </div>
