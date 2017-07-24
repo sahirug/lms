@@ -10,8 +10,8 @@
 
     $sidebar_array_lecturers = array(
         "Modules" => ["Modules","fa fa-book", "home.php"],
-        "Assignments" => ["Upload Assignment", "fa fa-upload", "#"],
-        "Results" => ["Upload Results", "fa fa-university", "#"],
+//        "Assignments" => ["Upload Assignment", "fa fa-upload", "#"],
+//        "Results" => ["Upload Results", "fa fa-university", "#"],
         "Settings" => ["Amend Personal Data", "fa fa-user", "settings.php"],
         "Logout" => ["Logout", "fa fa-sign-out", "php/logout.php"]
 

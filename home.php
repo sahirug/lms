@@ -45,23 +45,6 @@
     <div class="left" id="mySideNav">
         <div class="sidebar-list">
             <ul>
-<!--                <div class="sidebar-profile">-->
-<!--                    
-//                    include "php/user_details.php";
-//
-//                    if($access_level == "student"){
-//                        echo "<div class='sidebar-profile-item'>".$user_result['student_name']."</div>";
-//                        echo
-//                            "<div class='sidebar-profile-item'>".$user_result['batch']."</div>";
-//                        echo "<div class='sidebar-profile-item sidebar-profile-last-item'>Logout<i class='fa fa-sign-out' style='float: right'></i></div>";
-//                    }else if($access_level == "lec"){
-//                        echo "<div class='sidebar-profile-item'>".$user_result['staff_name']."</div>";
-////                        echo
-////                            "<div class='sidebar-profile-item'>".$user_result['batch']."</div>";
-//                    }
-//
-//                    
-<!--                </div>-->
                 <?php
                 include "php/sidebar_arrays.php";
                 if(isset($_SESSION['access_level']) && $_SESSION['access_level'] == "student" ){
@@ -91,18 +74,16 @@
                 <div class="box-header">
                     <strong>
                         <?php
-                        include "php/user_details.php";
-                        echo $award_name;
-//                        if ($_SESSION['access_level'] == "student"){
-//                            echo $award_name;
-//                        }
+                        include "php/init.php";
+                        include "php/user_details1.php";
+                        echo get_award_name($conn);
 
                         ?>
                     </strong>
                     <div class="year">
                         <?php
-                        if($access_level == "student"){
-                            echo "<small>Year ".$user_result['year']."</small>";
+                        if($_SESSION['access_level'] == "student"){
+                            echo "<small>Year ".get_year($conn)."</small>";
                         }else{
                             echo "";
                         }
@@ -123,19 +104,10 @@
                                 <?php if ($_SESSION['access_level'] == "student") echo "<td>Lecturer Name</td>"?>
                             </tr>
                             <?php
-                            include "php/init.php";
-                            include "php/user_details.php";
-                            include "php/module_details.php";
 
-                            foreach ($module_list as $module) {
-                                $module_id = $module['module_id'];
-                                if ($access_level == "student") {
-                                    $staff_name = get_lecturer_name($conn, $module['staff_id']);
-                                    echo "<tr><td>" . $module['module_id'] . "</td><td><a href='http://localhost/lms/module.php?module_id=$module_id'>" . $module['module_name'] . "</a></td><td>$staff_name</td></tr>";
-                                }else{
-                                    echo "<tr><td>" . $module['module_id'] . "</td><td><a href='http://localhost/lms/module.php?module_id=$module_id'>" . $module['module_name'] . "</a></td></tr>";
-                                }
-                            }
+                            draw_table($conn);
+                            
+                            
                             ?>
                         </table>
 
