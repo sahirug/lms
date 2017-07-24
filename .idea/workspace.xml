@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca364cb0-aaf0-4d46-9e38-218f4eaa96f1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/batch_select.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/php/add_user.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/php/enroll_lec_module.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/add_user.php" afterPath="$PROJECT_DIR$/add_user.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/load_students.php" afterPath="$PROJECT_DIR$/php/load_students.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/sidebar_arrays.php" afterPath="$PROJECT_DIR$/php/sidebar_arrays.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/select_user_type.php" afterPath="$PROJECT_DIR$/select_user_type.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.php" afterPath="$PROJECT_DIR$/settings.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/add_user.php" afterPath="$PROJECT_DIR$/php/add_user.php" />
     </list>
     <ignored path="LMS.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -85,20 +78,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add_user.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="add_user.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/add_user.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="38" column="134" selection-start-line="38" selection-start-column="134" selection-end-line="38" selection-end-column="134" />
+            <state relative-caret-position="600">
+              <caret line="40" column="124" selection-start-line="40" selection-start-column="124" selection-end-line="40" selection-end-column="124" />
               <folding>
-                <marker date="1500924396469" expanded="true" signature="183:306" ph="INSERT INTO user... " />
-                <marker date="1500924396469" expanded="true" signature="328:451" ph="INSERT INTO user... " />
-                <marker date="1500924396469" expanded="true" signature="582:641" ph="SELECT batch... student" />
-                <marker date="1500924396469" expanded="true" signature="837:920" ph="SELECT modul... batch_module_lecturer" />
-                <marker date="1500924396469" expanded="true" signature="837:930" ph="SELECT modul... batch_module_lecturer" />
-                <marker date="1500924396469" expanded="true" signature="968:1061" ph="SELECT modul... batch_module_lecturer" />
-                <marker date="1500924396469" expanded="true" signature="1212:1274" ph="INSERT INTO module_has_students... " />
-                <marker date="1500924396469" expanded="true" signature="1212:1294" ph="INSERT INTO module_has_students... " />
+                <marker date="1500926668938" expanded="true" signature="183:306" ph="INSERT INTO user... " />
+                <marker date="1500926668938" expanded="true" signature="328:451" ph="INSERT INTO user... " />
+                <marker date="1500926668938" expanded="true" signature="582:641" ph="SELECT batch... student" />
+                <marker date="1500926668938" expanded="true" signature="837:920" ph="SELECT modul... batch_module_lecturer" />
+                <marker date="1500926668938" expanded="true" signature="837:930" ph="SELECT modul... batch_module_lecturer" />
+                <marker date="1500926668938" expanded="true" signature="968:1061" ph="SELECT modul... batch_module_lecturer" />
+                <marker date="1500926668938" expanded="true" signature="1212:1274" ph="INSERT INTO module_has_students... " />
+                <marker date="1500926668938" expanded="true" signature="1212:1294" ph="INSERT INTO module_has_students... " />
               </folding>
             </state>
           </provider>
@@ -195,7 +188,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/settings.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
@@ -261,11 +254,11 @@
         <option value="$PROJECT_DIR$/add_user.php" />
         <option value="$PROJECT_DIR$/select_user_type.php" />
         <option value="$PROJECT_DIR$/php/load_students.php" />
-        <option value="$PROJECT_DIR$/php/add_user.php" />
         <option value="$PROJECT_DIR$/batch_select.php" />
         <option value="$PROJECT_DIR$/php/enroll_lec_module.php" />
         <option value="$PROJECT_DIR$/php/sidebar_arrays.php" />
         <option value="$PROJECT_DIR$/settings.php" />
+        <option value="$PROJECT_DIR$/php/add_user.php" />
       </list>
     </option>
   </component>
@@ -446,7 +439,7 @@
       <workItem from="1500758809270" duration="317000" />
       <workItem from="1500798354115" duration="21894000" />
       <workItem from="1500844551675" duration="909000" />
-      <workItem from="1500881337853" duration="22442000" />
+      <workItem from="1500881337853" duration="22523000" />
     </task>
     <task id="LOCAL-00001" summary="fixed div main overflowing on mobile">
       <created>1499277105881</created>
@@ -560,11 +553,18 @@
       <option name="project" value="LOCAL" />
       <updated>1500919351301</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="root can fully create accounts">
+      <created>1500926623517</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1500926623517</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="220174000" />
+    <option name="totallyTimeSpent" value="220255000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
@@ -618,7 +618,8 @@
     <MESSAGE value="add new user dash" />
     <MESSAGE value="fixed crash on newer php versions" />
     <MESSAGE value="fixed relative paths" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed relative paths" />
+    <MESSAGE value="root can fully create accounts" />
+    <option name="LAST_COMMIT_MESSAGE" value="root can fully create accounts" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1050,23 +1051,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/add_user.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="134" selection-start-line="38" selection-start-column="134" selection-end-line="38" selection-end-column="134" />
-          <folding>
-            <marker date="1500924396469" expanded="true" signature="183:306" ph="INSERT INTO user... " />
-            <marker date="1500924396469" expanded="true" signature="328:451" ph="INSERT INTO user... " />
-            <marker date="1500924396469" expanded="true" signature="582:641" ph="SELECT batch... student" />
-            <marker date="1500924396469" expanded="true" signature="837:920" ph="SELECT modul... batch_module_lecturer" />
-            <marker date="1500924396469" expanded="true" signature="837:930" ph="SELECT modul... batch_module_lecturer" />
-            <marker date="1500924396469" expanded="true" signature="968:1061" ph="SELECT modul... batch_module_lecturer" />
-            <marker date="1500924396469" expanded="true" signature="1212:1274" ph="INSERT INTO module_has_students... " />
-            <marker date="1500924396469" expanded="true" signature="1212:1294" ph="INSERT INTO module_has_students... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/batch_select.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="523">
@@ -1113,6 +1097,23 @@
             <marker date="1500926171836" expanded="true" signature="2186:2199" ph="..." />
             <marker date="1500926171836" expanded="true" signature="2699:2712" ph="..." />
             <marker date="1500926171836" expanded="true" signature="4019:4063" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/add_user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="40" column="124" selection-start-line="40" selection-start-column="124" selection-end-line="40" selection-end-column="124" />
+          <folding>
+            <marker date="1500926668938" expanded="true" signature="183:306" ph="INSERT INTO user... " />
+            <marker date="1500926668938" expanded="true" signature="328:451" ph="INSERT INTO user... " />
+            <marker date="1500926668938" expanded="true" signature="582:641" ph="SELECT batch... student" />
+            <marker date="1500926668938" expanded="true" signature="837:920" ph="SELECT modul... batch_module_lecturer" />
+            <marker date="1500926668938" expanded="true" signature="837:930" ph="SELECT modul... batch_module_lecturer" />
+            <marker date="1500926668938" expanded="true" signature="968:1061" ph="SELECT modul... batch_module_lecturer" />
+            <marker date="1500926668938" expanded="true" signature="1212:1274" ph="INSERT INTO module_has_students... " />
+            <marker date="1500926668938" expanded="true" signature="1212:1294" ph="INSERT INTO module_has_students... " />
           </folding>
         </state>
       </provider>

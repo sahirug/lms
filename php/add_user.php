@@ -37,9 +37,9 @@ if($type == 'student'){
     echo "<script>alert('User $username has been saved!');window.location.replace('http://localhost/lms/select_user_type.php');</script>";
 }else if($type = 'lec'){
     echo "<script>alert('User $username has been saved!');window.location.replace('http://localhost/lms/batch_select.php?id=$id');</script>";
-
 }else{
-    
+    echo "<script>alert('User $username has been saved!');window.location.replace('http://localhost/lms/select_user_type.php');</script>";
+
 }
 
 ?>
