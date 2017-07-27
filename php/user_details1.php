@@ -1,5 +1,4 @@
 <?php
-include "module_details.php";
 
 function get_award_name($conn){
     $id = $_SESSION['id'];
@@ -43,6 +42,13 @@ function load_table($conn){
     $sql = "SELECT * FROM $table WHERE $id_column=(SELECT $id_column FROM user WHERE username='$username')";
 }
 
+function get_lecturer_name1($conn, $staff_id){
+    $sql = "SELECT staff_name FROM staff WHERE staff_id = '$staff_id'";
+    $results = $conn->query($sql);
+    $results = $results->fetch_assoc();
+    return $results['staff_name'];
+}
+
 function draw_table($conn){
     $access_level = $_SESSION['access_level'];
     $id = $_SESSION['id'];
@@ -74,7 +80,7 @@ function draw_table($conn){
                 $module_id = $row['module_id'];
                 $module_name = $row['module_name'];
                 $staff_id = $row['staff_id'];
-                $staff_name = get_lecturer_name($conn, $staff_id);
+                $staff_name = get_lecturer_name1($conn, $staff_id);
                 echo "<tr><td>$module_id</td><td><a href='module.php?module_id=$module_id'>$module_name</a></td><td>$staff_name</td></tr>";
             }else{
                 $module_id = $row['module_id'];

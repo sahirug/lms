@@ -55,23 +55,6 @@
     <div class="left" id="mySideNav">
         <div class="sidebar-list">
             <ul>
-<!--                <div class="sidebar-profile">-->
-<!--                    
-//                    include "php/user_details.php";
-//
-//                    if($access_level == "student"){
-//                        echo "<div class='sidebar-profile-item'>".$user_result['student_name']."</div>";
-//                        echo
-//                            "<div class='sidebar-profile-item'>".$user_result['batch']."</div>";
-//                        echo "<div class='sidebar-profile-item sidebar-profile-last-item'>Logout<i class='fa fa-sign-out' style='float: right'></i></div>";
-//                    }else if($access_level == "lec"){
-//                        echo "<div class='sidebar-profile-item'>".$user_result['staff_name']."</div>";
-////                        echo
-////                            "<div class='sidebar-profile-item'>".$user_result['batch']."</div>";
-//                    }
-//
-//                    ?>
-<!--                </div>-->
                 <?php
                 include "php/sidebar_arrays.php";
                 if(isset($_SESSION['access_level']) && $_SESSION['access_level'] == "student" ){
@@ -101,20 +84,15 @@
                 <div class="box-header">
                     <strong>
                         <?php
-//                        include "php/init.php";
-//                        include "php/module_details.php";
                         echo module_name($_GET['module_id'], $conn);
-//                        if ($_SESSION['access_level'] == "student"){
-//                            echo $award_name;
-//                        }
 
                         ?>
                     </strong>
                     <div class="year">
                         <?php
-                        include "php/user_details.php";
-                        if($access_level == "student"){
-                            echo "<small>Year ".$user_result['year']."</small>";
+                        include "php/user_details1.php";
+                        if($_SESSION['access_level'] == "student"){
+                            echo "<small>Year ".get_year($conn)."</small>";
                         }else{
                         }
 
