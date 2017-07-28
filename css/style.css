@@ -190,6 +190,10 @@ span.psw {
     float: left;
 }
 
+.logo:hover{
+    cursor: pointer;
+}
+
 .logo-text{
     color: white;
     width: 100%;
@@ -197,6 +201,10 @@ span.psw {
     margin-top: 6px;
     font-family: Neuzeit;
     font-size: 25px;
+}
+
+.logo-text:hover{
+    cursor: pointer;
 }
 
 .header{

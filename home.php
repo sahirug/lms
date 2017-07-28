@@ -17,10 +17,10 @@
 
         <div class="logo">
             <div class="logo-text">
-                <strong>PLYMOUTH</strong>
+                <a href="http://localhost/main/home.php" style="color: white; text-decoration: none;"><strong>PLYMOUTH</strong></a>
             </div>
             <div class="logo-text">
-                <strong>UNIVERSITY</strong>
+                <a href="http://localhost/main/home.php" style="color: white; text-decoration: none;"><strong>UNIVERSITY</strong></a>
             </div>
         </div>
 
@@ -69,52 +69,52 @@
         </div>
     </div>
 
-        <div class="main" id="content">
-            <div class="box" id="box-one">
-                <div class="box-header">
-                    <strong>
-                        <?php
-                        include "php/init.php";
-                        include "php/user_details1.php";
-                        echo get_award_name($conn);
+    <div class="main" id="content">
+        <div class="box" id="box-one">
+            <div class="box-header">
+                <strong>
+                    <?php
+                    include "php/init.php";
+                    include "php/user_details1.php";
+                    echo get_award_name($conn);
 
-                        ?>
-                    </strong>
-                    <div class="year">
-                        <?php
-                        if($_SESSION['access_level'] == "student"){
-                            echo "<small>Year ".get_year($conn)."</small>";
-                        }else{
-                            echo "";
-                        }
+                    ?>
+                </strong>
+                <div class="year">
+                    <?php
+                    if($_SESSION['access_level'] == "student"){
+                        echo "<small>Year ".get_year($conn)."</small>";
+                    }else{
+                        echo "";
+                    }
 
 
-                        ?>
-                    </div>
+                    ?>
                 </div>
-                <div class="box-content">
-                    <div class="main-title">
-                        My Modules
-                    </div>
-                    <div class="box-data">
-                        <table border="0" width="100%">
-                            <tr style="border-bottom: 1px solid black;">
-                                <td>Module ID</td>
-                                <td>Module Name</td>
-                                <?php if ($_SESSION['access_level'] == "student") echo "<td>Lecturer Name</td>"?>
-                            </tr>
-                            <?php
+            </div>
+            <div class="box-content">
+                <div class="main-title">
+                    My Modules
+                </div>
+                <div class="box-data">
+                    <table border="0" width="100%">
+                        <tr style="border-bottom: 1px solid black;">
+                            <td>Module ID</td>
+                            <td>Module Name</td>
+                            <?php if ($_SESSION['access_level'] == "student") echo "<td>Lecturer Name</td>"?>
+                        </tr>
+                        <?php
 
-                            draw_table($conn);
-                            
-                            
-                            ?>
-                        </table>
+                        draw_table($conn);
 
-                    </div>
+
+                        ?>
+                    </table>
+
                 </div>
             </div>
         </div>
+    </div>
 </div>
 <!-- <script type="text/javascript" src="script.js"></script> -->
 

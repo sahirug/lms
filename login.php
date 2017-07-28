@@ -46,7 +46,7 @@
 
             <input type="checkbox" checked="checked"> <span style="font-size: 14px">Remember me</span>
 
-            <a href="#" style="float: right; font-size: 12px;">Forgot your password?</a>
+            <a href="http://localhost/main/home.php" style="float: right; font-size: 12px;">Return to Main site</a>
         </div>
 
         <!--<div class="container" style="background-color:#f1f1f1">-->

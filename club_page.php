@@ -22,10 +22,10 @@
 
         <div class="logo">
             <div class="logo-text">
-                <strong>PLYMOUTH</strong>
+                <a href="http://localhost/main/home.php" style="color: white; text-decoration: none;"><strong>PLYMOUTH</strong></a>
             </div>
             <div class="logo-text">
-                <strong>UNIVERSITY</strong>
+                <a href="http://localhost/main/home.php" style="color: white; text-decoration: none;"><strong>UNIVERSITY</strong></a>
             </div>
         </div>
 
