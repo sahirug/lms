@@ -85,7 +85,7 @@
                     </strong>
                     <div class="year">
                         <?php
-                        if($access_level == "student"){
+                        if($_SESSION['access_level'] == "student"){
                             echo "<small>Year ".$user_result['year']."</small>";
                         }else{
                         }

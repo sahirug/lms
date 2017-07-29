@@ -85,7 +85,7 @@
                 $_SESSION['access_level'] = $access_level;
                 $_SESSION['id'] = $id;
                 if($access_level == 'root'){
-                    header("Location: root_clubs.php");
+                    header("Location: select_user_type.php");
                 }else{
                     header("Location: home.php");
                 }

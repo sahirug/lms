@@ -2,7 +2,7 @@
 
     $sidebar_array_students = array(
         "Modules" => ["Modules","fa fa-book", "home.php"],
-        "Timetable" => ["Timetable","fa fa-calendar", "#"],
+//        "Timetable" => ["Timetable","fa fa-calendar", "#"],
         "Clubs" => ["Clubs", "fa fa-users", "clubs.php"],
         "Settings" => ["Amend Personal Data", "fa fa-user", "settings.php"],
         "Logout" => ["Logout", "fa fa-sign-out", "php/logout.php"],

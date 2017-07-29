@@ -29,7 +29,7 @@
                 <a href="#" onclick="openNav()" class="menu-link"><img src="images/menu1.png" class="menu-icon"></a>
             </div>
             <span class="user-name">
-                <?php echo isset($_SESSION['username'])?$_SESSION['id']:'no user'; ?>
+                <?php echo isset($_SESSION['username'])?$_SESSION['username']:'no user'; ?>
             </span>
 
 
